@@ -1,0 +1,909 @@
+{
+  "Navbar": {
+    "searchPlaceholder": "Search for products...",
+    "searchPlaceholderMobile": "Search products...",
+    "profile": "Profile",
+    "help": "Help",
+    "cart": "Cart",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "terms": "Terms and conditions",
+    "aboutUs": "About us",
+    "faqs": "FAQs",
+    "contactUs": "Contact us",
+    "language": "Language",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "HomePage": {
+    "skipToMain": "Skip to main content",
+    "hotOffers": "Offers Waiting for you",
+    "viewAllDeals": "View All Deals",
+    "suggestedForYou": "Suggested for You",
+    "unableToLoadHotOffers": "Unable to load hot offers",
+    "showingFallback": "Showing fallback products. Please try refreshing the page.",
+    "category": "Category",
+    "unableToLoadProducts": "Unable to load products",
+    "toast": {
+      "addedToCart": "Product added to cart!"
+    },
+    "aria": {
+      "viewAllDeals": "View all hot offers and deals",
+      "hotOffersProducts": "Offers for you",
+      "suggestedProducts": "Suggested products"
+    },
+    "hero": {
+      "slides": {
+        "slide1": {
+          "imageAlt": "Futuristic workstation with multiple high-end monitors",
+          "badge": "New Arrival",
+          "title": "MacBook Pro M3 Max",
+          "description": "Unprecedented performance. Incredible efficiency. The most powerful laptop chip ever created.",
+          "ctaText": "Shop Now"
+        },
+        "slide2": {
+          "imageAlt": "Modern wireless noise canceling headphones close up",
+          "title": "Sony WH-1000XM5",
+          "description": "Industry-leading noise cancellation now even better with eight microphones.",
+          "ctaText": "Buy Now"
+        }
+      }
+    }
+  },
+  "Footer": {
+    "description": "The destination for premium technology, components, and lifestyle gadgets. Engineering excellence delivered to your door.",
+    "shopping": {
+      "title": "Shopping",
+      "latestReleases": "Latest Releases",
+      "bestSellers": "Best Sellers",
+      "dailyDeals": "Daily Deals",
+      "giftCards": "Gift Cards"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Help Center",
+      "trackOrder": "Track Order",
+      "shippingReturns": "Shipping & Returns",
+      "warrantyInfo": "Warranty Info"
+    },
+    "connect": {
+      "title": "Connect",
+      "share": "Share",
+      "rssFeed": "RSS Feed",
+      "email": "Email"
+    },
+    "copyright": "© {year} API Tech Global Inc. All rights reserved.",
+    "bottom": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookieSettings": "Cookie Settings"
+    }
+  },
+  "CategorySidebar": {
+    "title": "Shop Categories",
+    "aria": {
+      "browseCategory": "Browse {name}",
+      "browseCategoryWithSubcategories": "Browse {name} and subcategories",
+      "expand": "Expand {name}",
+      "collapse": "Collapse {name}"
+    }
+  },
+  "ThemeToggle": {
+    "toggleTheme": "Toggle theme",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode"
+  },
+  "ErrorBoundary": {
+    "title": "Something went wrong",
+    "description": "We encountered an unexpected error",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home"
+  },
+  "HeroCarousel": {
+    "defaultCtaText": "Shop Now",
+    "aria": {
+      "heroCarousel": "Hero carousel",
+      "carouselSlides": "Carousel slides",
+      "slideLabel": "Slide {current} of {total}",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "slideIndicators": "Slide indicators",
+      "goToSlide": "Go to slide {number}",
+      "liveRegion": "Slide {current} of {total}: {title}"
+    }
+  },
+  "MobileAppPromo": {
+    "title": "Take API Tech with you everywhere",
+    "description": "Exclusive app-only deals, real-time order tracking, and priority customer support. Download the app today and get $20 off your first purchase.",
+    "appStoreAlt": "Download on the App Store",
+    "googlePlayAlt": "Get it on Google Play"
+  },
+  "QuickAccessCategories": {
+    "title": "Quick Access",
+    "aria": {
+      "categories": "Quick access categories",
+      "browseCategory": "Browse {name} category"
+    }
+  },
+  "ContactSection": {
+    "title": "Contact Our Tech Experts",
+    "subtitle": "Have a question about a complex build or a specific component? Our team of engineers is ready to help you make the right choice.",
+    "info": {
+      "headquarters": {
+        "title": "Headquarters",
+        "address": "101 Innovation Way, Silicon Valley, CA"
+      },
+      "emailSupport": {
+        "title": "Email Support"
+      }
+    },
+    "toast": {
+      "success": "Thank you for your message! We will get back to you soon.",
+      "error": "Failed to send message. Please try again."
+    },
+    "form": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "John Doe",
+        "required": "Full name is required"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "john@example.com",
+        "required": "Email is required",
+        "invalid": "Invalid email address"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "How can we help?",
+        "required": "Subject is required"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "How can we help you today?",
+        "required": "Message is required"
+      },
+      "sending": "Sending...",
+      "sendMessage": "Send Message"
+    }
+  },
+  "Common": {
+    "formErrors": {
+      "validationBanner": "Please fix the errors below and try again.",
+      "genericError": "An error occurred. Please try again.",
+      "unexpectedError": "An unexpected error occurred. Please try again."
+    }
+  },
+  "Validation": {
+    "invalidEmail": "Invalid email address",
+    "emailRequired": "Email is required",
+    "emailOrPhoneRequired": "Email or phone is required",
+    "emailOrPhoneInvalid": "Please enter a valid email or phone number",
+    "passwordRequired": "Password is required",
+    "passwordConfirmationRequired": "Password confirmation is required",
+    "currentPasswordRequired": "Current password is required",
+    "passwordMin": "Password must be at least {min} characters",
+    "passwordUppercase": "Password must contain at least one uppercase letter",
+    "passwordLowercase": "Password must contain at least one lowercase letter",
+    "passwordNumber": "Password must contain at least one number",
+    "passwordSpecial": "Password must contain at least one special character",
+    "passwordsMustMatch": "Passwords must match",
+    "firstNameRequired": "First name is required",
+    "lastNameRequired": "Last name is required",
+    "phoneRequired": "Phone number is required",
+    "termsMustAccept": "You must accept the terms and conditions",
+    "phoneCountryRequired": "Phone country is required",
+    "otpRequired": "OTP is required",
+    "locationCountryRequired": "Country is required",
+    "locationCityRequired": "City is required",
+    "locationStateRequired": "State/Province is required",
+    "locationStreetRequired": "Street address is required",
+    "locationMapUrlRequired": "Google Maps URL is required",
+    "invalidUrl": "Invalid URL",
+    "imageSizeLimit": "Image must be less than {maxSize}MB",
+    "imageTypeInvalid": "Invalid image type. Only JPEG, PNG, GIF, and WebP are allowed"
+  },
+  "Auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Please enter your details to sign in",
+      "form": {
+        "emailOrPhoneLabel": "Email or Phone",
+        "emailOrPhonePlaceholder": "name@example.com",
+        "passwordLabel": "Password"
+      },
+      "forgotPassword": "Forgot password?",
+      "signingIn": "Signing in...",
+      "signIn": "Sign In",
+      "loginWithGoogle": "Login with Google",
+      "googleSuccess": "Successfully logged in with Google!",
+      "orDivider": "OR",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create account",
+      "successRedirect": "Login successful! Redirecting...",
+      "securityNote": "All data is encrypted and safeguarded",
+      "footer": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "contactSupport": "Contact Support"
+      }
+    },
+    "register": {
+      "title": "Create an account",
+      "subtitle": "Join the API Tech community today.",
+      "phoneCountries": {
+        "EG": "Egypt (+20)",
+        "US": "United States (+1)",
+        "GB": "United Kingdom (+44)",
+        "SA": "Saudi Arabia (+966)",
+        "AE": "UAE (+971)",
+        "KW": "Kuwait (+965)",
+        "QA": "Qatar (+974)",
+        "JO": "Jordan (+962)",
+        "LB": "Lebanon (+961)"
+      },
+      "branding": {
+        "titlePrefix": "Let's Journey With",
+        "titleHighlight": "E-Commerce.",
+        "description": "Join thousands of tech enthusiasts. Get exclusive access to the latest hardware, dev tools, and premium support.",
+        "bullets": {
+          "freeShipping": "Free shipping on orders over $50",
+          "support247": "24/7 customer support",
+          "moneyBack": "30-day money-back guarantee"
+        }
+      },
+      "form": {
+        "firstNameLabel": "First Name",
+        "firstNamePlaceholder": "John",
+        "lastNameLabel": "Last Name",
+        "lastNamePlaceholder": "Doe",
+        "emailLabel": "Email Address",
+        "emailPlaceholder": "john@example.com",
+        "countryLabel": "Country",
+        "phoneLabel": "Phone Number",
+        "phonePlaceholder": "1234567890",
+        "passwordLabel": "Password",
+        "passwordHelper": "Min 8 chars with upper, lower, number & symbol",
+        "confirmPasswordLabel": "Confirm Password"
+      },
+      "terms": {
+        "prefix": "I agree to the",
+        "termsOfService": "Terms of Service",
+        "and": "and",
+        "privacyPolicy": "Privacy Policy"
+      },
+      "creatingAccount": "Creating account...",
+      "sendingVerification": "Sending verification...",
+      "createAccount": "Create Account",
+      "haveAccount": "Already have an account?",
+      "loginHere": "Login here",
+      "successRedirectVerify": "Registration successful! Redirecting to verify your email...",
+      "successVerify": "Registration successful! Please verify your email."
+    },
+    "forgotPassword": {
+      "secureServer": "Secure Server",
+      "title": "Forgot Password?",
+      "subtitle": "No worries! Enter your registered email to receive a reset code.",
+      "form": {
+        "emailLabel": "Email address",
+        "emailPlaceholder": "e.g. name@company.com"
+      },
+      "sending": "Sending...",
+      "sendResetCode": "Send Reset Code",
+      "remembered": "Remembered your password?",
+      "login": "Log in",
+      "otpSentRedirect": "OTP sent successfully! Redirecting...",
+      "footer": {
+        "officialAuth": {
+          "title": "Official Authentication",
+          "description": "Multi-factor security protocol enabled for your account safety."
+        },
+        "encryption": {
+          "title": "End-to-End Encryption",
+          "description": "All data is encrypted before transmission. Your privacy is priority."
+        },
+        "needHelp": {
+          "title": "Need Help?",
+          "description": "Contact our security team 24/7 if you suspect unauthorized access."
+        },
+        "copyright": "© {year} API Tech Corporation. All rights reserved."
+      }
+    },
+    "resetPassword": {
+      "title": "Set new password",
+      "subtitle": "Your identity has been verified. Please enter the OTP code and choose a strong password for your account.",
+      "form": {
+        "otpLabel": "OTP Code",
+        "otpPlaceholder": "Enter the OTP code sent to your email",
+        "newPasswordLabel": "New Password",
+        "confirmNewPasswordLabel": "Confirm New Password"
+      },
+      "passwordStrength": "Password strength:",
+      "strength": {
+        "weak": "Weak",
+        "fair": "Fair",
+        "good": "Good",
+        "strong": "Strong"
+      },
+      "requirements": {
+        "minChars": "8+ characters",
+        "oneNumber": "One number",
+        "upperLower": "Upper & lowercase",
+        "specialSymbol": "Special symbol"
+      },
+      "resetting": "Resetting...",
+      "resetPassword": "Reset Password",
+      "backToSignIn": "Back to sign in",
+      "havingTrouble": "Having trouble?",
+      "contactSupport": "Contact tech support",
+      "emailNotFound": "Email not found. Please start over.",
+      "successRedirectLogin": "Password reset successfully! Redirecting to login...",
+      "footer": {
+        "copyright": "© {year} API Tech Inc. All rights reserved.",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "helpCenter": "Help Center"
+      }
+    },
+    "verify": {
+      "secureServer": "Secure Server",
+      "title": "Verify Your Email",
+      "sentCodeTo": "We've sent a 4-character code to",
+      "didNotReceive": "Didn't receive the code?",
+      "sending": "Sending...",
+      "resendOtp": "Resend OTP",
+      "verifying": "Verifying...",
+      "verifyAndProceed": "Verify and Proceed",
+      "wrongEmail": "Wrong email?",
+      "goBackToRegister": "Go back to register",
+      "invalidOtp": "Invalid OTP. Please try again.",
+      "otpSent": "OTP sent successfully! Check your email.",
+      "resendFailed": "Failed to resend OTP. Please try again.",
+      "successRedirectLogin": "Email verified successfully! Redirecting to login...",
+      "footer": {
+        "officialAuth": {
+          "title": "Official Authentication",
+          "description": "Multi-factor security protocol enabled for your account safety."
+        },
+        "encryption": {
+          "title": "End-to-End Encryption",
+          "description": "All data is encrypted before transmission. Your privacy is priority."
+        },
+        "needHelp": {
+          "title": "Need Help?",
+          "description": "Contact our security team 24/7 if you suspect unauthorized access."
+        },
+        "copyright": "© {year} API Tech Corporation. All rights reserved."
+      }
+    },
+    "profile": {
+      "userFallback": "User",
+      "premiumMember": "Premium Member",
+      "alt": {
+        "userProfile": "User profile",
+        "currentProfile": "Current profile"
+      },
+      "sidebar": {
+        "manageProfile": "Manage Profile",
+        "changePassword": "Change Password",
+        "orders": "Orders",
+        "wishlist": "Wishlist",
+        "signOut": "Sign Out"
+      },
+      "title": "Profile Settings",
+      "subtitle": "Update your personal information and profile picture.",
+      "photo": {
+        "title": "Profile Photo",
+        "help": "JPG, GIF or PNG. Max size of 2MB.",
+        "changePhoto": "Change Photo",
+        "remove": "Remove"
+      },
+      "form": {
+        "fullName": "Full Name",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "firstNamePlaceholder": "Enter your first name",
+        "lastNamePlaceholder": "Enter your last name",
+        "emailAddress": "Email Address",
+        "phoneNumber": "Phone Number",
+        "phonePlaceholder": "Enter your phone number",
+        "country": "Country Code",
+        "country2": "Country",
+        "emailReadOnly": "Email (Read-only)",
+        "bioOptional": "Bio (Optional)",
+        "bioPlaceholder": "Tell us a bit about yourself...",
+        "locations": "Locations",
+        "locationsHelp": "Add your delivery addresses",
+        "addLocation": "Add Location",
+        "noLocations": "No locations added yet. Click 'Add Location' to get started.",
+        "location": "Location",
+        "remove": "Remove",
+        "countryPlaceholder": "Enter country",
+        "city": "City",
+        "cityPlaceholder": "Enter city",
+        "state": "State/Province",
+        "statePlaceholder": "Enter state or province",
+        "street": "Street Address",
+        "streetPlaceholder": "Enter street address",
+        "googleMapUrl": "Google Maps URL",
+        "googleMapUrlPlaceholder": "https://www.google.com/maps/place/..."
+      },
+      "updateSuccess": "Profile updated successfully!",
+      "actions": {
+        "cancel": "Cancel",
+        "saveChanges": "Save Changes",
+        "saving": "Saving..."
+      },
+      "lastUpdated": "Last updated:",
+      "connectedAccounts": {
+        "title": "Connected Accounts",
+        "connectedTo": "Connected to {email}",
+        "disconnect": "Disconnect",
+        "notConnected": "Not connected",
+        "connect": "Connect"
+      },
+      "footer": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "helpCenter": "Help Center",
+        "copyright": "© {year} API Tech Inc. All rights reserved."
+      },
+      "orders": {
+        "orderNumber": "Order",
+        "orderHistory": "Order History",
+        "orderHistorySubtitle": "Check the status of your recent orders and manage returns.",
+        "viewDetails": "View Details",
+        "showingOrders": "Showing {from} to {to} of {total} orders",
+        "empty": "No orders yet.",
+        "error": "Unable to load orders. Please try again.",
+        "backToList": "Back to orders",
+        "orderDetails": "Order Details",
+        "total": "Total",
+        "totalAmount": "Total Amount",
+        "items": "items",
+        "transactionItems": "Transaction Items",
+        "noItems": "No items in this order.",
+        "notFound": "Order not found.",
+        "downloadInvoice": "Download Invoice",
+        "standardPurchase": "Standard Purchase",
+        "placedOn": "Placed on {date}",
+        "paymentStatus": "Payment Status",
+        "deliveryStatus": "Delivery Status",
+        "paidSuccessfully": "Paid Successfully",
+        "deliveryLocation": "Delivery Location",
+        "viewOnGoogleMaps": "View on Google Maps",
+        "country": "Country",
+        "stateProvince": "State / Province",
+        "city": "City",
+        "streetAddress": "Street Address",
+        "status": {
+          "completed": "Completed",
+          "delivered": "Delivered",
+          "pending": "Pending",
+          "processing": "Processing",
+          "shipped": "Shipped",
+          "cancelled": "Cancelled"
+        }
+      },
+      "wishlist": {
+        "savedItems": "Wishlist Items ({count})",
+        "savedItemsSubtitle": "Review your saved products and add them to your cart.",
+        "addToCart": "Add to Cart",
+        "remove": "Remove from wishlist",
+        "empty": "Your wishlist is empty.",
+        "error": "Unable to load wishlist. Please try again.",
+        "previous": "Previous",
+        "next": "Next",
+        "pageInfo": "Page {current} of {last} ({total} items)"
+      }
+    },
+    "changePassword": {
+      "breadcrumbs": {
+        "settings": "Settings",
+        "security": "Security",
+        "changePassword": "Change Password"
+      },
+      "title": "Security & Access",
+      "subtitle": "Manage your password and authentication preferences to keep your API tokens safe.",
+      "cardTitle": "Change Password",
+      "cardDescription": "Ensure your password is at least 12 characters long to stay compliant with API Tech security standards. Avoid using common phrases.",
+      "form": {
+        "currentPasswordLabel": "Current Password",
+        "currentPasswordPlaceholder": "Enter old password",
+        "newPasswordLabel": "New Password",
+        "newPasswordPlaceholder": "Min 12 characters",
+        "confirmNewPasswordLabel": "Confirm New Password",
+        "confirmNewPasswordPlaceholder": "Repeat new password"
+      },
+      "passwordStrength": "Password Strength",
+      "strength": {
+        "weak": "Weak",
+        "fair": "Fair",
+        "good": "Good",
+        "strong": "Strong"
+      },
+      "requirements": {
+        "minChars": "At least 12 characters",
+        "oneUppercase": "One uppercase letter",
+        "oneSpecial": "One special character",
+        "oneNumber": "One numerical digit"
+      },
+      "forgotCurrentPassword": "Forgot your current password?",
+      "changePassword": "Change Password",
+      "changing": "Changing...",
+      "success": "Password changed successfully!",
+      "twoFactor": {
+        "title": "Two-Factor Authentication",
+        "description": "Changing your password will NOT disable 2FA. We recommend keeping it active for maximum security.",
+        "configureLink": "Configure 2FA settings"
+      }
+    },
+    "logout": {
+      "nav": {
+        "documentation": "Documentation",
+        "marketplace": "Marketplace",
+        "enterprise": "Enterprise"
+      },
+      "title": "Sign Out of Your Account",
+      "subtitle": "Are you sure you want to end your session? Choose a security preference below.",
+      "options": {
+        "thisDevice": {
+          "title": "Sign out of this device",
+          "description": "Best for personal workstations. Keeps you active on other devices."
+        },
+        "allDevices": {
+          "title": "Sign out of all devices",
+          "description": "Security reset. Clears active sessions on mobile, tablets, and public hardware."
+        }
+      },
+      "signingOut": "Signing out...",
+      "confirmLogout": "Confirm Logout",
+      "cancelStayLoggedIn": "Cancel and Stay Logged In",
+      "secureSessionEnd": "Secure Session End",
+      "footer": {
+        "note": "© {year} API Tech Infrastructure • Privacy Protocol v2.4"
+      }
+    }
+  },
+  "AboutUs": {
+    "breadcrumbs": {
+      "home": "Home",
+      "aboutUs": "About Us"
+    },
+    "hero": {
+      "imageAlt": "Professional tech team collaborating in modern office",
+      "title": "Powering the Next Generation of Digital Infrastructure",
+      "subtitle": "Building the future of e-commerce through seamless API integration and robust, security-first digital systems.",
+      "contactCta": "Contact Us"
+    },
+    "stats": {
+      "ariaLabel": "Company stats",
+      "enterpriseClients": "Enterprise Clients",
+      "uptimeSla": "Uptime SLA",
+      "expertSupport": "Expert Support",
+      "globalRegions": "Global Regions"
+    },
+    "aboutSection": {
+      "tag": "About",
+      "title": "Our Story & Principles",
+      "subtitle": "Learn more about how we build products, the values we optimize for, and the work we do to help teams ship confidently.",
+      "errorTitle": "Error loading About content",
+      "errorSubtitle": "Please try again later.",
+      "empty": "No About content available right now.",
+      "imageAlt": "{title} image {number}"
+    },
+    "visionPurpose": {
+      "title": "Vision & Purpose",
+      "subtitle": "Driving innovation through clarity and a commitment to solving the world's most complex connectivity challenges.",
+      "visionTitle": "Our Vision",
+      "visionDescription": "A world where every API interaction is seamless and empowers every business—regardless of size—to scale without technical limits or infrastructure bottlenecks.",
+      "missionTitle": "Our Mission",
+      "missionDescription": "Providing robust, scalable infrastructure for global commerce through developer-centric solutions, uncompromising security, and relentless innovation."
+    },
+    "whyPartner": {
+      "title": "Why Partner With Us",
+      "cards": {
+        "securityFirst": {
+          "title": "Security First",
+          "description": "Enterprise-grade encryption and compliance standards baked into every layer of our stack."
+        },
+        "developerCentric": {
+          "title": "Developer-Centric",
+          "description": "Clean documentation, SDKs in every major language, and a dashboard engineers actually love."
+        },
+        "highPerformance": {
+          "title": "High Performance",
+          "description": "Edge-optimized networks ensuring fast response times and reliable uptime globally."
+        }
+      }
+    },
+    "trust": {
+      "title": "Trusted by Industry Leaders"
+    }
+  },
+  "FaqsPage": {
+    "breadcrumbs": {
+      "home": "Home",
+      "faqs": "FAQs"
+    },
+    "title": "FAQs",
+    "contactCta": "Contact us",
+    "errorTitle": "Error loading FAQs",
+    "errorSubtitle": "Please try again later.",
+    "empty": "No FAQs available right now."
+  },
+  "ContactPage": {
+    "breadcrumbs": {
+      "home": "Home",
+      "contact": "Contact Us"
+    },
+    "title": "Contact Us & Support",
+    "subtitle": "Need help with your API integration? Our engineering team is standing by to assist you with technical inquiries and enterprise solutions.",
+    "toast": {
+      "success": "Thank you for your message! We will get back to you soon."
+    },
+    "companyInfo": {
+      "title": "Company Information",
+      "office": {
+        "title": "Our Office"
+      },
+      "phone": {
+        "title": "Phone",
+        "hours": "Mon-Fri, 9am - 6pm PST"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "socials": {
+        "title": "Socials"
+      }
+    },
+    "map": {
+      "imageAlt": "Abstract map showing San Francisco technological district",
+      "badge": "SF Tech Center"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "Jane Doe",
+        "required": "Full name is required"
+      },
+      "businessEmail": {
+        "label": "Business Email",
+        "placeholder": "jane@company.com",
+        "required": "Business email is required",
+        "invalid": "Invalid email address"
+      },
+      "phoneNumber": {
+        "label": "Phone Number",
+        "placeholder": "+1 (555) 000-0000",
+        "required": "Phone number is required"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Select a subject",
+        "required": "Subject is required",
+        "options": {
+          "technicalSupport": "Technical Support",
+          "salesInquiry": "Sales Inquiry",
+          "apiPartnerships": "API Partnerships",
+          "billingQuestion": "Billing Question"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your technical requirements...",
+        "required": "Message is required"
+      },
+      "sending": "Sending...",
+      "sendMessage": "Send Message"
+    },
+    "privacy": {
+      "prefix": "By clicking send, you agree to our",
+      "privacyPolicy": "Privacy Policy",
+      "suffix": "regarding your personal data."
+    }
+  },
+  "TermsPage": {
+    "breadcrumbs": {
+      "home": "Home",
+      "terms": "Terms & Conditions"
+    },
+    "title": "Terms and Conditions",
+    "meta": {
+      "effective": "Effective: {date}",
+      "revision": "Revision: {version}",
+      "readingTime": "Reading time: {minutes} min"
+    },
+    "errorTitle": "Error loading terms",
+    "errorSubtitle": "Please try again later."
+  },
+  "FileUpload": {
+    "label": "Attachments (Optional)",
+    "errors": {
+      "sizeLimit": "File size exceeds {maxSize}MB limit",
+      "typeNotAllowed": "File type not allowed. Please upload images, PDFs, Word documents, or text files.",
+      "uploadFailedStatus": "Upload failed with status {status}",
+      "uploadFailed": "Upload failed",
+      "uploadCancelled": "Upload cancelled"
+    },
+    "aria": {
+      "dropzone": "Upload files by clicking or dragging and dropping",
+      "input": "File upload input",
+      "uploadedFiles": "Uploaded files",
+      "progress": "Upload progress for {fileName}",
+      "remove": "Remove {fileName}"
+    },
+    "dropzone": {
+      "prefix": "Drag & drop files or",
+      "browse": "browse",
+      "hint": "Attach logs, screenshots, or configuration files (Max {maxSize}MB)"
+    },
+    "status": {
+      "failed": "Failed",
+      "done": "Done"
+    }
+  },
+  "Alert": {
+    "close": "Close alert"
+  },
+  "Toast": {
+    "notifications": "Notifications"
+  },
+  "ProductDetails": {
+    "breadcrumb": {
+      "home": "Home"
+    },
+    "newRelease": "New Release",
+    "reviews_word": "Reviews",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "save": "SAVE {percent}%",
+    "addToCart": "Add to Cart",
+    "addingToCart": "Adding to Cart",
+    "notifyMe": "Notify Me",
+    "notAvailable": "Not Available",
+    "wishlist": "Wishlist",
+    "addToWishlist": "Add to Wishlist",
+    "removeFromWishlist": "Remove from Wishlist",
+    "addedToCart": "Product added to cart!",
+    "addedToWishlist": "Product added to wishlist!",
+    "removedFromWishlist": "Product removed from wishlist!",
+    "outOfStockMessage": "This product is currently out of stock",
+    "notFound": "Product Not Found",
+    "notFoundDescription": "The product you're looking for doesn't exist or has been removed.",
+    "color": "Color",
+    "bandSize": "Band Size",
+    "features": {
+      "alwaysOnDisplay": "Always-On Retina display",
+      "waterResistant": "Water resistant up to 50m",
+      "healthMonitoring": "Advanced ECG & Oxygen monitoring"
+    },
+    "reviews": {
+      "title": "Customer Reviews",
+      "subtitle": "Overall rating based on {count} verified purchases",
+      "verifiedReviews": "Verified Reviews",
+      "verifiedDescription": "All reviews are from verified buyers of this product. We ensure transparency and authenticity in our feedback system.",
+      "loadMore": "Load More Reviews"
+    },
+    "review": {
+      "author": "Author",
+      "verifiedPurchase": "Verified Purchase",
+      "edit": "Edit",
+      "delete": "Delete",
+      "helpful": "Helpful ({count})",
+      "share": "Share"
+    },
+    "reviewForm": {
+      "title": "Write a Review",
+      "rateProduct": "Rate this product",
+      "experience": "Your Experience",
+      "experiencePlaceholder": "What did you like or dislike about the product?",
+      "addPhotos": "Add Photos",
+      "upload": "Upload",
+      "submit": "Submit Review",
+      "submitting": "Submitting...",
+      "success": "Review submitted successfully!",
+      "error": "Failed to submit review. Please try again.",
+      "ratingRequired": "Please select a rating",
+      "commentRequired": "Please write a review comment"
+    }
+  },
+  "Cart": {
+    "breadcrumbs": {
+      "home": "Home",
+      "cart": "Shopping Cart"
+    },
+    "title": "Shopping Cart",
+    "itemCount": "You have {count} {count, plural, one {item} other {items}} in your cart",
+    "clearCart": "Clear Cart",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "estimatedTax": "Estimated Tax",
+    "discountCode": "Discount Code",
+    "discountCodePlaceholder": "APITECH2024",
+    "apply": "Apply",
+    "totalAmount": "Total Amount",
+    "pricesIncludeTax": "Prices include applicable taxes",
+    "proceedToCheckout": "Proceed to Checkout",
+    "secureCheckout": "Secure SSL Encrypted Checkout",
+    "nextDayDelivery": "Next Day Delivery",
+    "nextDayDeliveryDescription": "available if you order within the next {time}.",
+    "frequentlyBoughtTogether": "Frequently Bought Together",
+    "removeItem": "Remove {name} from cart",
+    "decreaseQuantity": "Decrease quantity",
+    "increaseQuantity": "Increase quantity",
+    "empty": "Your cart is empty",
+    "emptyDescription": "Add some products to your cart to get started.",
+    "continueShopping": "Continue Shopping",
+    "toast": {
+      "addedToCartSuccess": "Product added to cart successfully",
+      "addToCartError": "Failed to add product to cart",
+      "itemUpdatedSuccess": "Cart item updated successfully",
+      "itemRemovedSuccess": "Cart item removed successfully",
+      "cartClearedSuccess": "Cart cleared successfully"
+    }
+  },
+  "Checkout": {
+    "processing": "Processing...",
+    "addressRequired": "Please provide a complete address",
+    "paymentError": "Payment URL not received",
+    "paymentFailed": "Payment failed. Please try again.",
+    "breadcrumbs": {
+      "home": "Home",
+      "cart": "Shopping Cart",
+      "checkout": "Checkout"
+    },
+    "title": "Checkout",
+    "description": "Complete your order by providing delivery and payment details",
+    "emptyCart": "Your cart is empty. Please add items before checkout.",
+    "backToCart": "Back to Cart",
+    "deliveryAddress": "Delivery Address",
+    "selectShippingAddress": "Select Shipping Address",
+    "addNewAddress": "+ Add New Address",
+    "addresses": {
+      "home": "Home",
+      "office": "Office",
+      "address": "Address"
+    },
+    "noAddresses": "No addresses available",
+    "newDeliveryDetails": "New Delivery Details",
+    "country": "Country",
+    "stateProvince": "State / Province",
+    "city": "City",
+    "streetAddress": "Street Address",
+    "googleMapUrl": "Google Map URL",
+    "googleMapUrlHint": "Paste your location link to help our courier find you faster.",
+    "paymentMethod": "Payment Method",
+    "onlinePayment": "Online Payment",
+    "onlinePaymentDescription": "Secure credit card, PayPal, or Apple Pay via SSL encryption",
+    "cashOnDelivery": "Cash on Delivery",
+    "cashOnDeliveryDescription": "Pay with cash when your package is delivered to your door",
+    "orderSummary": "Order Summary",
+    "items": "Items ({count})",
+    "viewItems": "View Items",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "estimatedTax": "Estimated Tax",
+    "totalAmount": "Total Amount",
+    "pricesIncludeTax": "Prices include applicable taxes",
+    "placeOrder": "Place Order",
+    "secureTransaction": "100% Secure Transaction",
+    "termsNotice": "By placing your order, you agree to API Tech's Terms of Service and Privacy Policy.",
+    "needHelp": "Need help with checkout?",
+    "supportPhone": "Call us at 1-800-API-TECH",
+    "paymentCallback": {
+      "processing": "Processing transaction...",
+      "verifying": "Please wait while we verify your payment",
+      "success": "Payment successful!",
+      "successMessage": "Your payment has been successfully processed.",
+      "error": "Payment verification failed",
+      "close": "Close"
+    }
+  }
+}
+

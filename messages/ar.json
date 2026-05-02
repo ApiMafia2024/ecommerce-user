@@ -1,0 +1,909 @@
+{
+  "Navbar": {
+    "searchPlaceholder": "ابحث عن المنتجات...",
+    "searchPlaceholderMobile": "ابحث عن المنتجات...",
+    "profile": "الملف الشخصي",
+    "help": "المساعدة",
+    "cart": "السلة",
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "terms": "الشروط والأحكام",
+    "aboutUs": "من نحن",
+    "faqs": "الأسئلة الشائعة",
+    "contactUs": "تواصل معنا",
+    "language": "اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية"
+  },
+  "HomePage": {
+    "skipToMain": "تخطي إلى المحتوى الرئيسي",
+    "hotOffers": "عروض في انتظارك",
+    "viewAllDeals": "عرض كل العروض",
+    "suggestedForYou": "مقترح لك",
+    "unableToLoadHotOffers": "تعذر تحميل العروض",
+    "showingFallback": "يتم عرض منتجات بديلة. يرجى تحديث الصفحة والمحاولة مرة أخرى.",
+   "category": "الفئة",
+    "unableToLoadProducts": "تعذر تحميل المنتجات",
+    "toast": {
+      "addedToCart": "تمت إضافة المنتج إلى السلة!"
+    },
+    "aria": {
+      "viewAllDeals": "عرض جميع العروض والصفقات",
+      "hotOffersProducts": "منتجات العروض",
+      "suggestedProducts": "المنتجات المقترحة"
+    },
+    "hero": {
+      "slides": {
+        "slide1": {
+          "imageAlt": "محطة عمل مستقبلية مع عدة شاشات عالية الأداء",
+          "badge": "وصل حديثًا",
+          "title": "MacBook Pro M3 Max",
+          "description": "أداء غير مسبوق وكفاءة مذهلة. أقوى شريحة للابتوب تم ابتكارها على الإطلاق.",
+          "ctaText": "تسوق الآن"
+        },
+        "slide2": {
+          "imageAlt": "سماعات لاسلكية حديثة مع إلغاء ضوضاء",
+          "title": "Sony WH-1000XM5",
+          "description": "إلغاء ضوضاء رائد في المجال أصبح أفضل الآن مع ثمانية ميكروفونات.",
+          "ctaText": "اشترِ الآن"
+        }
+      }
+    }
+  },
+  "Footer": {
+    "description": "وجهتك للتقنية المميزة والقطع والإكسسوارات الذكية. جودة هندسية تصل إلى باب منزلك.",
+    "shopping": {
+      "title": "التسوق",
+      "latestReleases": "أحدث الإصدارات",
+      "bestSellers": "الأكثر مبيعًا",
+      "dailyDeals": "عروض يومية",
+      "giftCards": "بطاقات هدايا"
+    },
+    "support": {
+      "title": "الدعم",
+      "helpCenter": "مركز المساعدة",
+      "trackOrder": "تتبع الطلب",
+      "shippingReturns": "الشحن والاسترجاع",
+      "warrantyInfo": "معلومات الضمان"
+    },
+    "connect": {
+      "title": "تواصل معنا",
+      "share": "مشاركة",
+      "rssFeed": "خلاصة RSS",
+      "email": "البريد الإلكتروني"
+    },
+    "copyright": "© {year} API Tech Global Inc. جميع الحقوق محفوظة.",
+    "bottom": {
+      "privacyPolicy": "سياسة الخصوصية",
+      "termsOfService": "شروط الخدمة",
+      "cookieSettings": "إعدادات ملفات تعريف الارتباط"
+    }
+  },
+  "CategorySidebar": {
+    "title": "تسوق حسب الفئات",
+    "aria": {
+      "browseCategory": "تصفح {name}",
+      "browseCategoryWithSubcategories": "تصفح {name} والفئات الفرعية",
+      "expand": "توسيع {name}",
+      "collapse": "طي {name}"
+    }
+  },
+  "ThemeToggle": {
+    "toggleTheme": "تبديل المظهر",
+    "switchToLightMode": "التبديل إلى الوضع الفاتح",
+    "switchToDarkMode": "التبديل إلى الوضع الداكن"
+  },
+  "ErrorBoundary": {
+    "title": "حدث خطأ ما",
+    "description": "واجهنا خطأ غير متوقع",
+    "tryAgain": "حاول مرة أخرى",
+    "goHome": "العودة للرئيسية"
+  },
+  "HeroCarousel": {
+    "defaultCtaText": "تسوق الآن",
+    "aria": {
+      "heroCarousel": "شريط العروض الرئيسي",
+      "carouselSlides": "شرائح العرض",
+      "slideLabel": "الشريحة {current} من {total}",
+      "previousSlide": "الشريحة السابقة",
+      "nextSlide": "الشريحة التالية",
+      "slideIndicators": "مؤشرات الشرائح",
+      "goToSlide": "الانتقال إلى الشريحة رقم {number}",
+      "liveRegion": "الشريحة {current} من {total}: {title}"
+    }
+  },
+  "MobileAppPromo": {
+    "title": "اصطحب API Tech معك أينما كنت",
+    "description": "عروض حصرية للتطبيق فقط، وتتبع الطلبات لحظيًا، ودعم أولوية للعملاء. حمّل التطبيق اليوم واحصل على خصم 20$ على أول عملية شراء.",
+    "appStoreAlt": "تحميل من App Store",
+    "googlePlayAlt": "احصل عليه على Google Play"
+  },
+  "QuickAccessCategories": {
+    "title": "وصول سريع",
+    "aria": {
+      "categories": "فئات الوصول السريع",
+      "browseCategory": "تصفح فئة {name}"
+    }
+  },
+  "ContactSection": {
+    "title": "تواصل مع خبراء التقنية",
+    "subtitle": "هل لديك سؤال حول تجميعة معقدة أو قطعة محددة؟ فريق مهندسينا جاهز لمساعدتك لاتخاذ القرار الصحيح.",
+    "info": {
+      "headquarters": {
+        "title": "المقر الرئيسي",
+        "address": "101 Innovation Way، وادي السيليكون، كاليفورنيا"
+      },
+      "emailSupport": {
+        "title": "دعم البريد الإلكتروني"
+      }
+    },
+    "toast": {
+      "success": "شكرًا لرسالتك! سنعود إليك قريبًا.",
+      "error": "تعذر إرسال الرسالة. يرجى المحاولة مرة أخرى."
+    },
+    "form": {
+      "fullName": {
+        "label": "الاسم الكامل",
+        "placeholder": "محمد أحمد",
+        "required": "الاسم الكامل مطلوب"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "name@example.com",
+        "required": "البريد الإلكتروني مطلوب",
+        "invalid": "عنوان البريد الإلكتروني غير صالح"
+      },
+      "subject": {
+        "label": "الموضوع",
+        "placeholder": "كيف يمكننا المساعدة؟",
+        "required": "الموضوع مطلوب"
+      },
+      "message": {
+        "label": "الرسالة",
+        "placeholder": "كيف يمكننا مساعدتك اليوم؟",
+        "required": "الرسالة مطلوبة"
+      },
+      "sending": "جارٍ الإرسال...",
+      "sendMessage": "إرسال الرسالة"
+    }
+  },
+  "Common": {
+    "formErrors": {
+      "validationBanner": "يرجى تصحيح الأخطاء أدناه ثم المحاولة مرة أخرى.",
+      "genericError": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+      "unexpectedError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى."
+    }
+  },
+  "Validation": {
+    "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailOrPhoneRequired": "البريد الإلكتروني أو رقم الهاتف مطلوب",
+    "emailOrPhoneInvalid": "يرجى إدخال بريد إلكتروني أو رقم هاتف صالح",
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "passwordConfirmationRequired": "تأكيد كلمة المرور مطلوب",
+    "currentPasswordRequired": "كلمة المرور الحالية مطلوبة",
+    "passwordMin": "يجب أن تكون كلمة المرور {min} أحرف على الأقل",
+    "passwordUppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
+    "passwordLowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل",
+    "passwordNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل",
+    "passwordSpecial": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل",
+    "passwordsMustMatch": "كلمتا المرور غير متطابقتين",
+    "firstNameRequired": "الاسم الأول مطلوب",
+    "lastNameRequired": "اسم العائلة مطلوب",
+    "phoneRequired": "رقم الهاتف مطلوب",
+    "termsMustAccept": "يجب الموافقة على الشروط والأحكام",
+    "phoneCountryRequired": "بلد الهاتف مطلوب",
+    "otpRequired": "رمز التحقق (OTP) مطلوب",
+    "locationCountryRequired": "الدولة مطلوبة",
+    "locationCityRequired": "المدينة مطلوبة",
+    "locationStateRequired": "الولاية/المحافظة مطلوبة",
+    "locationStreetRequired": "عنوان الشارع مطلوب",
+    "locationMapUrlRequired": "رابط خرائط جوجل مطلوب",
+    "invalidUrl": "رابط غير صالح",
+    "imageSizeLimit": "يجب أن تكون الصورة أقل من {maxSize} ميجابايت",
+    "imageTypeInvalid": "نوع الصورة غير صالح. يُسمح فقط بـ JPEG و PNG و GIF و WebP"
+  },
+  "Auth": {
+    "login": {
+      "title": "مرحبًا بعودتك",
+      "subtitle": "يرجى إدخال بياناتك لتسجيل الدخول",
+      "form": {
+        "emailOrPhoneLabel": "البريد الإلكتروني أو الهاتف",
+        "emailOrPhonePlaceholder": "name@example.com",
+        "passwordLabel": "كلمة المرور"
+      },
+      "forgotPassword": "هل نسيت كلمة المرور؟",
+      "signingIn": "جارٍ تسجيل الدخول...",
+      "signIn": "تسجيل الدخول",
+      "loginWithGoogle": "تسجيل الدخول باستخدام Google",
+      "googleSuccess": "تم تسجيل الدخول بنجاح !",
+      "orDivider": "أو",
+      "noAccount": "ليس لديك حساب؟",
+      "createAccount": "إنشاء حساب",
+      "successRedirect": "تم تسجيل الدخول بنجاح! جارٍ التحويل...",
+      "securityNote": "يتم تشفير جميع البيانات وحمايتها",
+      "footer": {
+        "privacyPolicy": "سياسة الخصوصية",
+        "termsOfService": "شروط الخدمة",
+        "contactSupport": "تواصل مع الدعم"
+      }
+    },
+    "register": {
+      "title": "إنشاء حساب",
+      "subtitle": "انضم إلى مجتمع API Tech اليوم.",
+      "phoneCountries": {
+        "EG": "مصر (+20)",
+        "US": "الولايات المتحدة (+1)",
+        "GB": "المملكة المتحدة (+44)",
+        "SA": "السعودية (+966)",
+        "AE": "الإمارات (+971)",
+        "KW": "الكويت (+965)",
+        "QA": "قطر (+974)",
+        "JO": "الأردن (+962)",
+        "LB": "لبنان (+961)"
+      },
+      "branding": {
+        "titlePrefix": "لنبدأ رحلتك مع",
+        "titleHighlight": "التجارة الإلكترونية.",
+        "description": "انضم إلى آلاف محبي التقنية. احصل على وصول حصري لأحدث الأجهزة وأدوات التطوير ودعم مميز.",
+        "bullets": {
+          "freeShipping": "شحن مجاني للطلبات فوق 50$",
+          "support247": "دعم عملاء على مدار الساعة",
+          "moneyBack": "ضمان استرجاع لمدة 30 يومًا"
+        }
+      },
+      "form": {
+        "firstNameLabel": "الاسم الأول",
+        "firstNamePlaceholder": "محمد",
+        "lastNameLabel": "اسم العائلة",
+        "lastNamePlaceholder": "أحمد",
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "name@example.com",
+        "countryLabel": "البلد",
+        "phoneLabel": "رقم الهاتف",
+        "phonePlaceholder": "1234567890",
+        "passwordLabel": "كلمة المرور",
+        "passwordHelper": "حد أدنى 8 أحرف مع حرف كبير وصغير ورقم ورمز",
+        "confirmPasswordLabel": "تأكيد كلمة المرور"
+      },
+      "terms": {
+        "prefix": "أوافق على",
+        "termsOfService": "شروط الخدمة",
+        "and": "و",
+        "privacyPolicy": "سياسة الخصوصية"
+      },
+      "creatingAccount": "جارٍ إنشاء الحساب...",
+      "sendingVerification": "جارٍ إرسال رمز التحقق...",
+      "createAccount": "إنشاء حساب",
+      "haveAccount": "لديك حساب بالفعل؟",
+      "loginHere": "سجّل الدخول",
+      "successRedirectVerify": "تم التسجيل بنجاح! جارٍ تحويلك للتحقق من البريد الإلكتروني...",
+      "successVerify": "تم التسجيل بنجاح! يرجى التحقق من بريدك الإلكتروني."
+    },
+    "forgotPassword": {
+      "secureServer": "خادم آمن",
+      "title": "هل نسيت كلمة المرور؟",
+      "subtitle": "لا تقلق! أدخل بريدك الإلكتروني المسجّل لاستلام رمز إعادة التعيين.",
+      "form": {
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "مثال: name@company.com"
+      },
+      "sending": "جارٍ الإرسال...",
+      "sendResetCode": "إرسال رمز إعادة التعيين",
+      "remembered": "تذكرت كلمة المرور؟",
+      "login": "تسجيل الدخول",
+      "otpSentRedirect": "تم إرسال رمز التحقق! جارٍ التحويل...",
+      "footer": {
+        "officialAuth": {
+          "title": "مصادقة رسمية",
+          "description": "تم تفعيل بروتوكول أمان متعدد العوامل لحماية حسابك."
+        },
+        "encryption": {
+          "title": "تشفير من طرف إلى طرف",
+          "description": "يتم تشفير جميع البيانات قبل الإرسال. خصوصيتك أولوية."
+        },
+        "needHelp": {
+          "title": "تحتاج مساعدة؟",
+          "description": "تواصل مع فريق الأمان لدينا 24/7 إذا كنت تشك في وصول غير مصرح به."
+        },
+        "copyright": "© {year} API Tech Corporation. جميع الحقوق محفوظة."
+      }
+    },
+    "resetPassword": {
+      "title": "تعيين كلمة مرور جديدة",
+      "subtitle": "تم التحقق من هويتك. يرجى إدخال رمز OTP واختيار كلمة مرور قوية لحسابك.",
+      "form": {
+        "otpLabel": "رمز OTP",
+        "otpPlaceholder": "أدخل رمز OTP المرسل إلى بريدك الإلكتروني",
+        "newPasswordLabel": "كلمة المرور الجديدة",
+        "confirmNewPasswordLabel": "تأكيد كلمة المرور الجديدة"
+      },
+      "passwordStrength": "قوة كلمة المرور:",
+      "strength": {
+        "weak": "ضعيفة",
+        "fair": "متوسطة",
+        "good": "جيدة",
+        "strong": "قوية"
+      },
+      "requirements": {
+        "minChars": "8 أحرف فأكثر",
+        "oneNumber": "رقم واحد",
+        "upperLower": "حروف كبيرة وصغيرة",
+        "specialSymbol": "رمز خاص"
+      },
+      "resetting": "جارٍ إعادة التعيين...",
+      "resetPassword": "إعادة تعيين كلمة المرور",
+      "backToSignIn": "العودة لتسجيل الدخول",
+      "havingTrouble": "هل تواجه مشكلة؟",
+      "contactSupport": "تواصل مع الدعم التقني",
+      "emailNotFound": "لم يتم العثور على البريد الإلكتروني. يرجى البدء من جديد.",
+      "successRedirectLogin": "تمت إعادة تعيين كلمة المرور بنجاح! جارٍ التحويل لتسجيل الدخول...",
+      "footer": {
+        "copyright": "© {year} API Tech Inc. جميع الحقوق محفوظة.",
+        "privacyPolicy": "سياسة الخصوصية",
+        "termsOfService": "شروط الخدمة",
+        "helpCenter": "مركز المساعدة"
+      }
+    },
+    "verify": {
+      "secureServer": "خادم آمن",
+      "title": "تحقق من بريدك الإلكتروني",
+      "sentCodeTo": "لقد أرسلنا رمزًا مكونًا من 4 أحرف إلى",
+      "didNotReceive": "لم يصلك الرمز؟",
+      "sending": "جارٍ الإرسال...",
+      "resendOtp": "إعادة إرسال الرمز",
+      "verifying": "جارٍ التحقق...",
+      "verifyAndProceed": "تحقق والمتابعة",
+      "wrongEmail": "البريد الإلكتروني غير صحيح؟",
+      "goBackToRegister": "العودة للتسجيل",
+      "invalidOtp": "رمز غير صحيح. حاول مرة أخرى.",
+      "otpSent": "تم إرسال الرمز بنجاح! تحقق من بريدك الإلكتروني.",
+      "resendFailed": "تعذر إعادة إرسال الرمز. يرجى المحاولة مرة أخرى.",
+      "successRedirectLogin": "تم التحقق من البريد الإلكتروني بنجاح! جارٍ التحويل لتسجيل الدخول...",
+      "footer": {
+        "officialAuth": {
+          "title": "مصادقة رسمية",
+          "description": "تم تفعيل بروتوكول أمان متعدد العوامل لحماية حسابك."
+        },
+        "encryption": {
+          "title": "تشفير من طرف إلى طرف",
+          "description": "يتم تشفير جميع البيانات قبل الإرسال. خصوصيتك أولوية."
+        },
+        "needHelp": {
+          "title": "تحتاج مساعدة؟",
+          "description": "تواصل مع فريق الأمان لدينا 24/7 إذا كنت تشك في وصول غير مصرح به."
+        },
+        "copyright": "© {year} API Tech Corporation. جميع الحقوق محفوظة."
+      }
+    },
+    "profile": {
+      "userFallback": "مستخدم",
+      "premiumMember": "عضو مميز",
+      "alt": {
+        "userProfile": "الملف الشخصي للمستخدم",
+        "currentProfile": "الصورة الحالية للملف الشخصي"
+      },
+      "sidebar": {
+        "manageProfile": "إدارة الملف الشخصي",
+        "changePassword": "تغيير كلمة المرور",
+        "orders": "الطلبات",
+        "wishlist": "المفضلة",
+        "signOut": "تسجيل الخروج"
+      },
+      "title": "إعدادات الملف الشخصي",
+      "subtitle": "حدّث معلوماتك الشخصية وصورة الملف الشخصي.",
+      "photo": {
+        "title": "صورة الملف الشخصي",
+        "help": "JPG أو GIF أو PNG. الحد الأقصى للحجم 2MB.",
+        "changePhoto": "تغيير الصورة",
+        "remove": "إزالة"
+      },
+      "form": {
+        "fullName": "الاسم الكامل",
+        "firstName": "الاسم الأول",
+        "lastName": "اسم العائلة",
+        "firstNamePlaceholder": "أدخل اسمك الأول",
+        "lastNamePlaceholder": "أدخل اسم العائلة",
+        "emailAddress": "البريد الإلكتروني",
+        "phoneNumber": "رقم الهاتف",
+        "phonePlaceholder": "أدخل رقم هاتفك",
+        "country": "رمز الدولة",
+        "country2": "الدولة",
+        "emailReadOnly": "البريد الإلكتروني (للقراءة فقط)",
+        "bioOptional": "نبذة (اختياري)",
+        "bioPlaceholder": "أخبرنا قليلًا عنك...",
+        "locations": "العناوين",
+        "locationsHelp": "أضف عناوين التوصيل الخاصة بك",
+        "addLocation": "إضافة عنوان",
+        "noLocations": "لم يتم إضافة عناوين بعد. انقر على 'إضافة عنوان' للبدء.",
+        "location": "العنوان",
+        "remove": "إزالة",
+        "countryPlaceholder": "أدخل الدولة",
+        "city": "المدينة",
+        "cityPlaceholder": "أدخل المدينة",
+        "state": "الولاية/المحافظة",
+        "statePlaceholder": "أدخل الولاية أو المحافظة",
+        "street": "عنوان الشارع",
+        "streetPlaceholder": "أدخل عنوان الشارع",
+        "googleMapUrl": "رابط خرائط جوجل",
+        "googleMapUrlPlaceholder": "https://www.google.com/maps/place/..."
+      },
+      "updateSuccess": "تم تحديث الملف الشخصي بنجاح!",
+      "actions": {
+        "cancel": "إلغاء",
+        "saveChanges": "حفظ التغييرات",
+        "saving": "جاري الحفظ..."
+      },
+      "lastUpdated": "آخر تحديث:",
+      "connectedAccounts": {
+        "title": "الحسابات المتصلة",
+        "connectedTo": "متصل بـ {email}",
+        "disconnect": "قطع الاتصال",
+        "notConnected": "غير متصل",
+        "connect": "اتصال"
+      },
+      "footer": {
+        "privacyPolicy": "سياسة الخصوصية",
+        "termsOfService": "شروط الخدمة",
+        "helpCenter": "مركز المساعدة",
+        "copyright": "© {year} API Tech Inc. جميع الحقوق محفوظة."
+      },
+      "orders": {
+        "orderNumber": "طلب",
+        "orderHistory": "سجل الطلبات",
+        "orderHistorySubtitle": "تحقق من حالة طلباتك الأخيرة وإدارة المرتجعات.",
+        "viewDetails": "عرض التفاصيل",
+        "showingOrders": "عرض {from} إلى {to} من {total} طلبات",
+        "empty": "لا توجد طلبات بعد.",
+        "error": "تعذر تحميل الطلبات. يرجى المحاولة مرة أخرى.",
+        "backToList": "العودة إلى الطلبات",
+        "orderDetails": "تفاصيل الطلب",
+        "total": "المجموع",
+        "totalAmount": "المبلغ الإجمالي",
+        "items": "منتجات",
+        "transactionItems": "عناصر المعاملة",
+        "noItems": "لا توجد منتجات في هذا الطلب.",
+        "notFound": "الطلب غير موجود.",
+        "downloadInvoice": "تحميل الفاتورة",
+        "standardPurchase": "شراء عادي",
+        "placedOn": "تم الطلب في {date}",
+        "paymentStatus": "حالة الدفع",
+        "deliveryStatus": "حالة التوصيل",
+        "paidSuccessfully": "تم الدفع بنجاح",
+        "deliveryLocation": "عنوان التوصيل",
+        "viewOnGoogleMaps": "عرض على خرائط جوجل",
+        "country": "الدولة",
+        "stateProvince": "الولاية / المحافظة",
+        "city": "المدينة",
+        "streetAddress": "عنوان الشارع",
+        "status": {
+          "completed": "مكتمل",
+          "delivered": "تم التوصيل",
+          "pending": "قيد الانتظار",
+          "processing": "قيد المعالجة",
+          "shipped": "تم الشحن",
+          "cancelled": "ملغى"
+        }
+      },
+      "wishlist": {
+        "savedItems": "العناصر المحفوظة ({count})",
+        "savedItemsSubtitle": "راجع منتجاتك المحفوظة وأضفها إلى السلة.",
+        "addToCart": "أضف إلى السلة",
+        "remove": "إزالة من المفضلة",
+        "empty": "قائمة المفضلة فارغة.",
+        "error": "تعذر تحميل قائمة المفضلة. يرجى المحاولة مرة أخرى.",
+        "previous": "السابق",
+        "next": "التالي",
+        "pageInfo": "صفحة {current} من {last} ({total} عنصر)"
+      }
+    },
+    "changePassword": {
+      "breadcrumbs": {
+        "settings": "الإعدادات",
+        "security": "الأمان",
+        "changePassword": "تغيير كلمة المرور"
+      },
+      "title": "الأمان والوصول",
+      "subtitle": "أدر كلمة المرور وتفضيلات المصادقة للحفاظ على أمان رموز API.",
+      "cardTitle": "تغيير كلمة المرور",
+      "cardDescription": "تأكد من أن كلمة المرور لا تقل عن 12 حرفًا للالتزام بمعايير أمان API Tech. تجنب استخدام العبارات الشائعة.",
+      "form": {
+        "currentPasswordLabel": "كلمة المرور الحالية",
+        "currentPasswordPlaceholder": "أدخل كلمة المرور الحالية",
+        "newPasswordLabel": "كلمة المرور الجديدة",
+        "newPasswordPlaceholder": "حد أدنى 12 حرفًا",
+        "confirmNewPasswordLabel": "تأكيد كلمة المرور الجديدة",
+        "confirmNewPasswordPlaceholder": "أعد كتابة كلمة المرور الجديدة"
+      },
+      "passwordStrength": "قوة كلمة المرور",
+      "strength": {
+        "weak": "ضعيفة",
+        "fair": "متوسطة",
+        "good": "جيدة",
+        "strong": "قوية"
+      },
+      "requirements": {
+        "minChars": "12 حرفًا على الأقل",
+        "oneUppercase": "حرف كبير واحد",
+        "oneSpecial": "رمز خاص واحد",
+        "oneNumber": "رقم واحد"
+      },
+      "forgotCurrentPassword": "هل نسيت كلمة مرورك الحالية؟",
+      "changePassword": "تغيير كلمة المرور",
+      "changing": "جارٍ التغيير...",
+      "success": "تم تغيير كلمة المرور بنجاح!",
+      "twoFactor": {
+        "title": "المصادقة الثنائية",
+        "description": "تغيير كلمة المرور لن يعطل 2FA. نوصي بإبقائها مفعّلة لأقصى أمان.",
+        "configureLink": "إعدادات المصادقة الثنائية"
+      }
+    },
+    "logout": {
+      "nav": {
+        "documentation": "التوثيق",
+        "marketplace": "المتجر",
+        "enterprise": "مؤسسات"
+      },
+      "title": "تسجيل الخروج من حسابك",
+      "subtitle": "هل أنت متأكد أنك تريد إنهاء جلستك؟ اختر تفضيل الأمان أدناه.",
+      "options": {
+        "thisDevice": {
+          "title": "تسجيل الخروج من هذا الجهاز",
+          "description": "مناسب للأجهزة الشخصية. يبقيك مسجّلًا على الأجهزة الأخرى."
+        },
+        "allDevices": {
+          "title": "تسجيل الخروج من جميع الأجهزة",
+          "description": "إعادة ضبط أمني. يقوم بإنهاء الجلسات النشطة على الهاتف والأجهزة اللوحية والأجهزة العامة."
+        }
+      },
+      "signingOut": "جارٍ تسجيل الخروج...",
+      "confirmLogout": "تأكيد تسجيل الخروج",
+      "cancelStayLoggedIn": "إلغاء والبقاء مسجّلًا",
+      "secureSessionEnd": "إنهاء جلسة آمن",
+      "footer": {
+        "note": "© {year} API Tech Infrastructure • بروتوكول الخصوصية v2.4"
+      }
+    }
+  },
+  "AboutUs": {
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "aboutUs": "من نحن"
+    },
+    "hero": {
+      "imageAlt": "فريق تقنية محترف يتعاون في مكتب حديث",
+      "title": "نقود الجيل القادم من البنية التحتية الرقمية",
+      "subtitle": "نبني مستقبل التجارة الإلكترونية عبر تكامل API سلس وأنظمة رقمية قوية تضع الأمان أولاً.",
+      "contactCta": "تواصل معنا"
+    },
+    "stats": {
+      "ariaLabel": "إحصائيات الشركة",
+      "enterpriseClients": "عملاء الشركات",
+      "uptimeSla": "اتفاقية توفر الخدمة",
+      "expertSupport": "دعم خبراء",
+      "globalRegions": "مناطق عالمية"
+    },
+    "aboutSection": {
+      "tag": "نبذة",
+      "title": "قصتنا ومبادئنا",
+      "subtitle": "تعرّف على طريقة بناء منتجاتنا والقيم التي نركز عليها والعمل الذي نقوم به لمساعدة الفرق على الإطلاق بثقة.",
+      "errorTitle": "تعذر تحميل محتوى من نحن",
+      "errorSubtitle": "يرجى المحاولة لاحقًا.",
+      "empty": "لا يوجد محتوى متاح حاليًا.",
+      "imageAlt": "{title} - صورة {number}"
+    },
+    "visionPurpose": {
+      "title": "الرؤية والغاية",
+      "subtitle": "ندفع الابتكار عبر وضوح الرؤية والالتزام بحل أكثر تحديات الاتصال تعقيدًا.",
+      "visionTitle": "رؤيتنا",
+      "visionDescription": "عالم تكون فيه كل تفاعلات الـ API سلسة وتمكّن كل الأعمال—بغض النظر عن حجمها—من التوسع دون قيود تقنية أو عوائق بنية تحتية.",
+      "missionTitle": "مهمتنا",
+      "missionDescription": "تقديم بنية تحتية قوية وقابلة للتوسع للتجارة العالمية عبر حلول تركز على المطورين وأمان بلا مساومة وابتكار مستمر."
+    },
+    "whyPartner": {
+      "title": "لماذا تتعاون معنا",
+      "cards": {
+        "securityFirst": {
+          "title": "الأمان أولاً",
+          "description": "تشفير بمعايير الشركات وامتثال مدمج في كل طبقة من منظومتنا."
+        },
+        "developerCentric": {
+          "title": "موجه للمطورين",
+          "description": "توثيق واضح وSDKs لأهم اللغات ولوحة تحكم يحبها المهندسون فعلاً."
+        },
+        "highPerformance": {
+          "title": "أداء عالٍ",
+          "description": "شبكات محسنة على الحافة لضمان استجابة سريعة وتوفر موثوق عالميًا."
+        }
+      }
+    },
+    "trust": {
+      "title": "موثوق به من قادة الصناعة"
+    }
+  },
+  "FaqsPage": {
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "faqs": "الأسئلة الشائعة"
+    },
+    "title": "الأسئلة الشائعة",
+    "contactCta": "تواصل معنا",
+    "errorTitle": "تعذر تحميل الأسئلة الشائعة",
+    "errorSubtitle": "يرجى المحاولة لاحقًا.",
+    "empty": "لا توجد أسئلة شائعة حاليًا."
+  },
+  "ContactPage": {
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "contact": "تواصل معنا"
+    },
+    "title": "تواصل معنا والدعم",
+    "subtitle": "هل تحتاج مساعدة في تكامل الـ API؟ فريقنا الهندسي جاهز لمساعدتك في الاستفسارات التقنية وحلول الشركات.",
+    "toast": {
+      "success": "شكرًا لرسالتك! سنعود إليك قريبًا."
+    },
+    "companyInfo": {
+      "title": "معلومات الشركة",
+      "office": {
+        "title": "مكتبنا"
+      },
+      "phone": {
+        "title": "الهاتف",
+        "hours": "الاثنين-الجمعة، 9ص - 6م بتوقيت المحيط الهادئ"
+      },
+      "email": {
+        "title": "البريد الإلكتروني"
+      },
+      "socials": {
+        "title": "وسائل التواصل"
+      }
+    },
+    "map": {
+      "imageAlt": "خريطة مجردة لمنطقة التقنية في سان فرانسيسكو",
+      "badge": "مركز تقنية SF"
+    },
+    "form": {
+      "title": "أرسل لنا رسالة",
+      "fullName": {
+        "label": "الاسم الكامل",
+        "placeholder": "محمد أحمد",
+        "required": "الاسم الكامل مطلوب"
+      },
+      "businessEmail": {
+        "label": "البريد الإلكتروني للعمل",
+        "placeholder": "name@company.com",
+        "required": "البريد الإلكتروني للعمل مطلوب",
+        "invalid": "عنوان البريد الإلكتروني غير صالح"
+      },
+      "phoneNumber": {
+        "label": "رقم الهاتف",
+        "placeholder": "+1 (555) 000-0000",
+        "required": "رقم الهاتف مطلوب"
+      },
+      "subject": {
+        "label": "الموضوع",
+        "placeholder": "اختر موضوعًا",
+        "required": "الموضوع مطلوب",
+        "options": {
+          "technicalSupport": "الدعم الفني",
+          "salesInquiry": "استفسار مبيعات",
+          "apiPartnerships": "شراكات API",
+          "billingQuestion": "استفسار فوترة"
+        }
+      },
+      "message": {
+        "label": "الرسالة",
+        "placeholder": "أخبرنا بمتطلباتك التقنية...",
+        "required": "الرسالة مطلوبة"
+      },
+      "sending": "جارٍ الإرسال...",
+      "sendMessage": "إرسال الرسالة"
+    },
+    "privacy": {
+      "prefix": "بالنقر على إرسال، فإنك توافق على",
+      "privacyPolicy": "سياسة الخصوصية",
+      "suffix": "فيما يتعلق ببياناتك الشخصية."
+    }
+  },
+  "TermsPage": {
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "terms": "الشروط والأحكام"
+    },
+    "title": "الشروط والأحكام",
+    "meta": {
+      "effective": "ساري اعتبارًا من: {date}",
+      "revision": "المراجعة: {version}",
+      "readingTime": "مدة القراءة: {minutes} دقائق"
+    },
+    "errorTitle": "تعذر تحميل الشروط",
+    "errorSubtitle": "يرجى المحاولة لاحقًا."
+  },
+  "FileUpload": {
+    "label": "المرفقات (اختياري)",
+    "errors": {
+      "sizeLimit": "حجم الملف يتجاوز الحد {maxSize}MB",
+      "typeNotAllowed": "نوع الملف غير مسموح. يرجى رفع صور أو ملفات PDF أو Word أو ملفات نصية.",
+      "uploadFailedStatus": "فشل الرفع بحالة {status}",
+      "uploadFailed": "فشل الرفع",
+      "uploadCancelled": "تم إلغاء الرفع"
+    },
+    "aria": {
+      "dropzone": "ارفع الملفات بالنقر أو بالسحب والإفلات",
+      "input": "حقل رفع الملفات",
+      "uploadedFiles": "الملفات المرفوعة",
+      "progress": "تقدم رفع {fileName}",
+      "remove": "إزالة {fileName}"
+    },
+    "dropzone": {
+      "prefix": "اسحب وأفلت الملفات أو",
+      "browse": "تصفح",
+      "hint": "أرفق السجلات أو لقطات الشاشة أو ملفات الإعدادات (الحد {maxSize}MB)"
+    },
+    "status": {
+      "failed": "فشل",
+      "done": "تم"
+    }
+  },
+  "Alert": {
+    "close": "إغلاق التنبيه"
+  },
+  "Toast": {
+    "notifications": "الإشعارات"
+  },
+  "ProductDetails": {
+    "breadcrumb": {
+      "home": "الرئيسية"
+    },
+    "newRelease": "إصدار جديد",
+    "reviews_word": "التقييمات",
+    "inStock": "متوفر",
+    "outOfStock": "غير متوفر",
+    "save": "وفر {percent}%",
+    "addToCart": "أضف إلى السلة",
+    "addingToCart": "جارٍ الإضافة إلى السلة",
+    "notifyMe": "أخبرني",
+    "notAvailable": "غير متاح",
+    "wishlist": "المفضلة",
+    "addToWishlist": "أضف إلى المفضلة",
+    "removeFromWishlist": "إزالة من المفضلة",
+    "addedToCart": "تمت إضافة المنتج إلى السلة!",
+    "addedToWishlist": "تمت إضافة المنتج إلى المفضلة!",
+    "removedFromWishlist": "تمت إزالة المنتج من المفضلة!",
+    "outOfStockMessage": "هذا المنتج غير متوفر حاليًا",
+    "notFound": "المنتج غير موجود",
+    "notFoundDescription": "المنتج الذي تبحث عنه غير موجود أو تم إزالته.",
+    "color": "اللون",
+    "bandSize": "حجم الشريط",
+    "features": {
+      "alwaysOnDisplay": "شاشة Retina دائمة الإضاءة",
+      "waterResistant": "مقاوم للماء حتى 50 متر",
+      "healthMonitoring": "مراقبة متقدمة للقلب والأكسجين"
+    },
+    "reviews": {
+      "title": "تقييمات العملاء",
+      "subtitle": "التقييم العام بناءً على {count} عملية شراء مؤكدة",
+      "verifiedReviews": "تقييمات مؤكدة",
+      "verifiedDescription": "جميع التقييمات من مشترين مؤكدين لهذا المنتج. نضمن الشفافية والأصالة في نظام التقييمات لدينا.",
+      "loadMore": "تحميل المزيد من التقييمات"
+    },
+    "review": {
+      "author": "المؤلف",
+      "verifiedPurchase": "شراء مؤكد",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "helpful": "مفيد ({count})",
+      "share": "مشاركة"
+    },
+    "reviewForm": {
+      "title": "اكتب تقييمًا",
+      "rateProduct": "قيم هذا المنتج",
+      "experience": "تجربتك",
+      "experiencePlaceholder": "ما الذي أعجبك أو لم يعجبك في المنتج؟",
+      "addPhotos": "أضف صورًا",
+      "upload": "رفع",
+      "submit": "إرسال التقييم",
+      "submitting": "جارٍ الإرسال...",
+      "success": "تم إرسال التقييم بنجاح!",
+      "error": "فشل إرسال التقييم. يرجى المحاولة مرة أخرى.",
+      "ratingRequired": "يرجى اختيار تقييم",
+      "commentRequired": "يرجى كتابة تعليق التقييم"
+    }
+  },
+  "Cart": {
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "cart": "سلة التسوق"
+    },
+    "title": "سلة التسوق",
+    "itemCount": "لديك {count} {count, plural, one {عنصر} other {عناصر}} في سلة التسوق",
+    "clearCart": "مسح السلة",
+    "orderSummary": "ملخص الطلب",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "free": "مجاني",
+    "estimatedTax": "الضريبة المقدرة",
+    "discountCode": "رمز الخصم",
+    "discountCodePlaceholder": "APITECH2024",
+    "apply": "تطبيق",
+    "totalAmount": "المبلغ الإجمالي",
+    "pricesIncludeTax": "الأسعار تشمل الضرائب المطبقة",
+    "proceedToCheckout": "المتابعة إلى الدفع",
+    "secureCheckout": "دفع آمن مشفر SSL",
+    "nextDayDelivery": "التوصيل في اليوم التالي",
+    "nextDayDeliveryDescription": "متاح إذا طلبت خلال {time} القادمة.",
+    "frequentlyBoughtTogether": "غالبًا ما يتم شراؤها معًا",
+    "removeItem": "إزالة {name} من السلة",
+    "decreaseQuantity": "تقليل الكمية",
+    "increaseQuantity": "زيادة الكمية",
+    "empty": "سلة التسوق فارغة",
+    "emptyDescription": "أضف بعض المنتجات إلى سلة التسوق للبدء.",
+    "continueShopping": "متابعة التسوق",
+    "toast": {
+      "addedToCartSuccess": "تمت إضافة المنتج إلى السلة بنجاح",
+      "addToCartError": "فشل إضافة المنتج إلى السلة",
+      "itemUpdatedSuccess": "تم تحديث عنصر السلة بنجاح",
+      "itemRemovedSuccess": "تم إزالة عنصر السلة بنجاح",
+      "cartClearedSuccess": "تم مسح السلة بنجاح"
+    }
+  },
+  "Checkout": {
+    "processing": "جاري المعالجة...",
+    "addressRequired": "يرجى تقديم عنوان كامل",
+    "paymentError": "لم يتم استلام رابط الدفع",
+    "paymentFailed": "فشل الدفع. يرجى المحاولة مرة أخرى.",
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "cart": "سلة التسوق",
+      "checkout": "الدفع"
+    },
+    "title": "الدفع",
+    "description": "أكمل طلبك من خلال تقديم تفاصيل التسليم والدفع",
+    "emptyCart": "سلة التسوق فارغة. يرجى إضافة عناصر قبل الدفع.",
+    "backToCart": "العودة إلى السلة",
+    "deliveryAddress": "عنوان التسليم",
+    "selectShippingAddress": "اختر عنوان الشحن",
+    "addNewAddress": "+ إضافة عنوان جديد",
+    "addresses": {
+      "home": "المنزل",
+      "office": "المكتب",
+      "address": "العنوان"
+    },
+    "noAddresses": "لا توجد عناوين متاحة",
+    "newDeliveryDetails": "تفاصيل التسليم الجديدة",
+    "country": "الدولة",
+    "stateProvince": "الولاية / المحافظة",
+    "city": "المدينة",
+    "streetAddress": "عنوان الشارع",
+    "googleMapUrl": "رابط خرائط جوجل",
+    "googleMapUrlHint": "الصق رابط موقعك لمساعدة ساعي التوصيل في العثور عليك بشكل أسرع.",
+    "paymentMethod": "طريقة الدفع",
+    "onlinePayment": "الدفع عبر الإنترنت",
+    "onlinePaymentDescription": "بطاقة ائتمان آمنة، PayPal، أو Apple Pay عبر تشفير SSL",
+    "cashOnDelivery": "الدفع عند الاستلام",
+    "cashOnDeliveryDescription": "ادفع نقدًا عند تسليم الطرد إلى باب منزلك",
+    "orderSummary": "ملخص الطلب",
+    "items": "العناصر ({count})",
+    "viewItems": "عرض العناصر",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "free": "مجاني",
+    "estimatedTax": "الضريبة المقدرة",
+    "totalAmount": "المبلغ الإجمالي",
+    "pricesIncludeTax": "الأسعار تشمل الضرائب المطبقة",
+    "placeOrder": "تأكيد الطلب",
+    "secureTransaction": "معاملة آمنة 100%",
+    "termsNotice": "من خلال تأكيد طلبك، أنت توافق على شروط الخدمة وسياسة الخصوصية لـ API Tech.",
+    "needHelp": "تحتاج مساعدة في الدفع؟",
+    "supportPhone": "اتصل بنا على 1-800-API-TECH",
+    "paymentCallback": {
+      "processing": "جاري معالجة المعاملة...",
+      "verifying": "يرجى الانتظار بينما نتحقق من دفعتك",
+      "success": "تم الدفع بنجاح!",
+      "successMessage": "تمت معالجة دفعتك بنجاح.",
+      "error": "فشل التحقق من الدفع",
+      "close": "إغلاق"
+    }
+  }
+}
+
