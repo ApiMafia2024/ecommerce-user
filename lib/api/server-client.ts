@@ -25,7 +25,7 @@ serverAxiosInstance.interceptors.response.use(
         data?.meta?.validation_errors || []
       );
     }
-    throw new ApiError('Network error', 500);
+    throw new ApiError(error.message ? `Network error: ${error.message}` : 'Network error', 500);
   }
 );
 
