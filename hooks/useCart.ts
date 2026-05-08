@@ -7,17 +7,17 @@ import { useCartMutations } from './mutations/useCartMutations';
 
 export const useCart = () => {
   const { addMutation, isAdding } = useCartMutations();
-  
+
   // Fetch the cart data
   const { data: items = [], isLoading } = useQuery({
     queryKey: ['cart'],
-    queryFn: () => apiClient.get<ApiResponse<CartItem[]>>('/client/carts'),
+    queryFn: () => apiClient.get<ApiResponse<CartItem[]>>('/carts'),
     select: (response) => extractItems(response.data),
     retry: false,
   });
-  const { data} = useQuery({
+  const { data } = useQuery({
     queryKey: ['cart'],
-    queryFn: () => apiClient.get('/client/carts'),
+    queryFn: () => apiClient.get('/carts'),
     retry: false,
   });
 
@@ -30,10 +30,11 @@ export const useCart = () => {
   return {
     items,
     isLoading,
-    addToCart: (id: number) => addMutation.mutate({variation_id:id}),
+    addToCart: (id: number) => addMutation.mutate({ variation_id: id }),
     isAdding,
     isInCart,
-    cartId:data?.data?.id,
+    // TODO
+    cartId: data?.data?.id,
     // totalItems: items.reduce((acc, item) => acc + item.quantity, 0),
   };
 };

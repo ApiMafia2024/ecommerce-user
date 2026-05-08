@@ -26,7 +26,7 @@ export function usePaymentMutation() {
 
   return useMutation({
     mutationFn: (data: PaymentRequest) =>
-      apiClient.post<ApiResponse<PaymentResponse>>('/client/payment/pay', data),
+      apiClient.post<ApiResponse<PaymentResponse>>('/payment/pay', data),
     onSuccess: (response) => {
       const paymentUrl = response.data?.url;
       if (paymentUrl) {
@@ -39,7 +39,7 @@ export function usePaymentMutation() {
     onError: (error: unknown) => {
       console.error('Payment error:', error);
       let errorMessage = t('paymentFailed') || 'Payment failed. Please try again.';
-      
+
       if (error instanceof ApiError) {
         if (error.message) {
           errorMessage = error.message;
@@ -47,7 +47,7 @@ export function usePaymentMutation() {
       } else if (error instanceof Error) {
         errorMessage = error.message;
       }
-      
+
       toast.error(errorMessage);
     },
   });
