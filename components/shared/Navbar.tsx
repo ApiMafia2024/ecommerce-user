@@ -33,7 +33,7 @@ const Navbar = () => {
       setIsMounted(true)
     }, 100)
   }, [])
-  
+
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -113,42 +113,82 @@ const Navbar = () => {
               >
                 <div className="flex items-center gap-2">
 
-                <Image src={`/icons/${locale}.svg`} alt={locale} width={20} height={20} />
-                <span 
-                 className="text-[10px] font-bold uppercase tracking-wider hidden sm:block">
-                  {locale === 'ar' ? 'AR' : 'EN'}
-                </span>
-                   </div>
-         
+                  <Image src={`/icons/${locale}.svg`} alt={locale} width={20} height={20} />
+                  <span
+                    className="text-[10px] font-bold uppercase tracking-wider hidden sm:block">
+                    {locale === 'ar' ? 'AR' : 'EN'}
+                  </span>
+                </div>
+
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="end"
               className="w-48 bg-white dark:bg-[#2d3238] border border-[#e8edf2] dark:border-[#3a3f45] shadow-xl rounded-xl p-2"
             >
-              {locale  == "ar" ? (
+              {locale == "ar" ? (
                 <DropdownMenuItem
-                className="cursor-pointer rounded-lg"
-                onSelect={(e) => {
-                  e.preventDefault()
-                  handleChangeLocale('en')
-                }}
-              >
-                {t('english')}
-              </DropdownMenuItem>
+                  className="cursor-pointer rounded-lg"
+                  onSelect={(e) => {
+                    e.preventDefault()
+                    handleChangeLocale('en')
+                  }}
+                >
+                  {t('english')}
+                </DropdownMenuItem>
               ) : (
                 <DropdownMenuItem
-                className="cursor-pointer rounded-lg"
-                onSelect={(e) => {
-                  e.preventDefault()
-                  handleChangeLocale('ar')
-                }}
-              >
-                {t('arabic')}
-              </DropdownMenuItem>
+                  className="cursor-pointer rounded-lg"
+                  onSelect={(e) => {
+                    e.preventDefault()
+                    handleChangeLocale('ar')
+                  }}
+                >
+                  {t('arabic')}
+                </DropdownMenuItem>
               )}
             </DropdownMenuContent>
           </DropdownMenu>
+          {/* Help dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                className={` flex ${isAuthenticated && isMounted && 'flex-col gap-1'} items-center text-[#537393] dark:text-gray-400 cursor-pointer hover:text-primary transition-colors ${isMounted && isAuthenticated ? 'flex-col gap-1' : 'flex-row gap-2'
+                  }`}
+                title={t('help')}
+              >
+                <HelpCircle className="w-5 h-5" />
+                <span
+                  className={`hidden sm:block ${isMounted && isAuthenticated
+                    ? 'text-[10px] font-bold uppercase tracking-wider'
+                    : 'text-sm font-medium'
+                    }`}
+                >
+                  {t('help')}
+                </span>
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="end"
+              className="w-56 bg-white dark:bg-[#2d3238] border border-[#e8edf2] dark:border-[#3a3f45] shadow-xl rounded-xl p-2"
+            >
+              <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
+                <Link href="/terms">{t('terms')}</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
+                <Link href="/about-us">{t('aboutUs')}</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
+                <Link href="/faqs">{t('faqs')}</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
+                <Link href="/contact">{t('contactUs')}</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+
           {isMounted && isLoading ? (
             <Loader2 className="w-5 h-5 animate-spin text-[#537393] dark:text-gray-400" />
           ) : isMounted && isAuthenticated ? (
@@ -161,37 +201,6 @@ const Navbar = () => {
                 <User className="w-5 h-5" />
                 <span className="text-[10px] font-bold uppercase tracking-wider hidden sm:block">{t('profile')}</span>
               </Link>
-
-              {/* Help dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <button
-                    type="button"
-                    className="flex flex-col items-center gap-1 text-[#537393] dark:text-gray-400 hover:text-primary transition-colors"
-                    title={t('help')}
-                  >
-                    <HelpCircle className="w-5 h-5" />
-                    <span className="text-[10px] font-bold uppercase tracking-wider hidden sm:block">{t('help')}</span>
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  align="end"
-                  className="w-56 bg-white dark:bg-[#2d3238] border border-[#e8edf2] dark:border-[#3a3f45] shadow-xl rounded-xl p-2"
-                >
-                  <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                    <Link href="/terms">{t('terms')}</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                    <Link href="/about-us">{t('aboutUs')}</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                    <Link href="/faqs">{t('faqs')}</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                    <Link href="/contact">{t('contactUs')}</Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
               <Link
                 href="/cart"
                 className="flex flex-col items-center gap-1 text-[#537393] dark:text-gray-400 hover:text-primary transition-colors relative"
@@ -199,11 +208,11 @@ const Navbar = () => {
               >
                 <ShoppingCart className="w-5 h-5" />
                 <span className="text-[10px] font-bold uppercase tracking-wider hidden sm:block">{t('cart')}</span>
-               {cartItems?.length ? (
-                <span className="absolute -top-1 -right-1 bg-[#F2720D] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                  {cartItems?.length ? cartItems?.length : null}
-                </span>
-               ) : null}
+                {cartItems?.length ? (
+                  <span className="absolute -top-1 -right-1 bg-[#F2720D] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                    {cartItems?.length ? cartItems?.length : null}
+                  </span>
+                ) : null}
               </Link>
             </>
           ) : (

@@ -1,8 +1,15 @@
+'use client';
+
+import Navbar from "@/components/shared/Navbar";
+import { usePathname } from "@/i18n/navigation";
+
 export default function AuthLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname() || '';
+  const showNavbar = pathname.includes('/login') || pathname.includes('/register');
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 transition-colors duration-200">
       {/* Material Icons - loaded globally */}
@@ -16,7 +23,10 @@ export default function AuthLayout({
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
         rel="stylesheet"
       />
+      {/* Navbar */}
+      {showNavbar && <Navbar />}
       {children}
     </div>
+
   );
 }

@@ -45,18 +45,18 @@ export default function LoginPage() {
     const error = searchParams.get('error');
     const googleAuthComplete = searchParams.get('google_auth_complete');
     const authToken = getCookie('auth_token');
-    
+
     // If there's a code parameter, redirect to the callback route handler
     if (code) {
       // Extract locale from pathname if present
       const pathSegments = pathname.split('/').filter(Boolean);
       const locale = pathSegments[0] === 'en' || pathSegments[0] === 'ar' ? pathSegments[0] : 'en';
       const callbackUrl = `/api/auth/google/callback?code=${encodeURIComponent(code)}&locale=${locale}`;
-      
+
       window.location.href = callbackUrl;
       return;
     }
-    
+
 
     if (googleAuthComplete && authToken) {
       login(authToken as string);
@@ -76,7 +76,7 @@ export default function LoginPage() {
       if (response.data?.token) {
         login(response.data.token);
       }
-      
+
       // Redirect after a short delay to show the success message
       const redirectTo = searchParams.get('redirect') || '/';
       setTimeout(() => {
@@ -89,7 +89,7 @@ export default function LoginPage() {
   });
 
 
-  const {mutate: handleGoogleLogin, isPending: isGoogleLoginPending} = useGoogleAuth();
+  const { mutate: handleGoogleLogin, isPending: isGoogleLoginPending } = useGoogleAuth();
   const onSubmit = (data: LoginFormData) => {
     clearAlert(); // Clear any previous alerts
     mutate(data);
@@ -100,7 +100,7 @@ export default function LoginPage() {
   return (
     <>
       {/* Header */}
-      <header className="w-full p-6 flex justify-center items-center">
+      <header className="w-full px-6 mt-8 mb-3 pb-0 flex justify-center items-center">
         <Link href="/" className="flex items-center space-x-2">
           {siteLogo ? (
             <div className="relative w-12 h-12">
@@ -124,9 +124,9 @@ export default function LoginPage() {
       </header>
 
       {/* Main Content */}
-      <main className="grow flex items-center justify-center px-4 py-12">
+      <main className="grow flex items-center justify-center px-4 pt-0">
         <div className="w-full max-w-md bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 border border-slate-100 dark:border-slate-700">
-          <div className="mb-8 text-center">
+          <div className="mb-2 text-center">
             <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
               {t("login.title")}
             </h1>
@@ -137,7 +137,7 @@ export default function LoginPage() {
 
           {/* Alert Banner */}
           {alert.isVisible && (
-            <div className="mb-6">
+            <div className="my-3">
               <Alert
                 variant={alert.variant}
                 message={alert.message}
@@ -148,7 +148,7 @@ export default function LoginPage() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 mt-5">
             {/* Email Field */}
             <FormInput
               label={t("login.form.emailOrPhoneLabel")}
@@ -157,7 +157,7 @@ export default function LoginPage() {
               leftIcon={User}
               error={errors.email_or_phone}
               {...register("email_or_phone")}
-            />  
+            />
 
             {/* Password Field */}
             <div>
@@ -259,27 +259,6 @@ export default function LoginPage() {
           </p>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="w-full p-8 text-center">
-        <div className="flex items-center justify-center space-x-2 text-emerald-600 dark:text-emerald-500 text-sm font-medium mb-4">
-          <UserCheck className="w-5 h-5" />
-          <span>{t("login.securityNote")}</span>
-        </div>
-        <div className="text-slate-400 dark:text-slate-500 text-xs space-x-4">
-          <Link className="hover:text-slate-600 dark:hover:text-slate-300" href="/terms">
-            {t("login.footer.privacyPolicy")}
-          </Link>
-          <span>•</span>
-          <Link className="hover:text-slate-600 dark:hover:text-slate-300" href="/terms">
-            {t("login.footer.termsOfService")}
-          </Link>
-          <span>•</span>
-          <Link className="hover:text-slate-600 dark:hover:text-slate-300" href="#">
-            {t("login.footer.contactSupport")}
-          </Link>
-        </div>
-      </footer>
     </>
   );
 }
