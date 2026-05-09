@@ -2,20 +2,23 @@
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Loader2, Cpu, CheckCircle, User, Mail, Phone, Lock } from "lucide-react";
+import { Loader2, Cpu, User, Mail, Phone, Lock } from "lucide-react";
 import { FormInput, Alert } from "@/components/ui";
 import { createRegisterSchema, RegisterFormData } from "@/validations/auth.validations";
 import { useRegisterMutation, useSendOtpMutation } from "@/hooks/mutations/useAuthMutations";
 import { useFormErrorHandler } from "@/hooks/useFormErrorHandler";
 import { useTranslations } from "next-intl";
+import { useSettingsContext } from "@/contexts/SettingsContext";
 
 import { Link, useRouter } from "@/i18n/navigation";
+import Image from "next/image";
 
 export default function RegisterPage() {
   const router = useRouter();
   const t = useTranslations("Auth");
   const v = useTranslations("Validation");
   const c = useTranslations("Common");
+  const { siteLogo, siteName } = useSettingsContext();
 
   // Common phone country codes (localized)
   const phoneCountries = [
@@ -101,34 +104,32 @@ export default function RegisterPage() {
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Side - Branding */}
         <div className="hidden lg:flex lg:col-span-6 flex-col justify-center space-y-8 pr-12">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-blue-600 p-2 rounded-lg">
-              <Cpu className="text-white w-8 h-8" />
-            </div>
-            <h1 className="text-3xl font-bold text-slate-900 dark:text-white">API Tech</h1>
-          </Link>
+         <Link href="/" className="flex items-center space-x-4">
+                   {siteLogo ? (
+                     <div className="relative w-12 h-12">
+                       <Image
+                         src={siteLogo}
+                         alt={siteName || 'Logo'}
+                         fill
+                         className="object-contain"
+                         unoptimized
+                       />
+                     </div>
+                   ) : (
+                     <div className="bg-blue-600 p-2 rounded-xl">
+                       <Cpu className="text-white w-8 h-8" />
+                     </div>
+                   )}
+                   <span className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                     {siteName || 'API Tech'}
+                   </span>
+                 </Link>
           <div className="space-y-4">
             <h2 className="text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
               {t("register.branding.titlePrefix")}{" "}
+              <br />
               <span className="text-blue-600">{t("register.branding.titleHighlight")}</span>
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-400">
-              {t("register.branding.description")}
-            </p>
-          </div>
-          <div className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span>{t("register.branding.bullets.freeShipping")}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span>{t("register.branding.bullets.support247")}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span>{t("register.branding.bullets.moneyBack")}</span>
-            </div>
           </div>
         </div>
 
@@ -243,10 +244,6 @@ export default function RegisterPage() {
                     <Link className="text-blue-600 hover:underline" href="/terms">
                       {t("register.terms.termsOfService")}
                     </Link>{" "}
-                    {t("register.terms.and")}{" "}
-                    <Link className="text-blue-600 hover:underline" href="/terms">
-                      {t("register.terms.privacyPolicy")}
-                    </Link>
                   </>
                 }
                 error={errors.terms_and_conditions}

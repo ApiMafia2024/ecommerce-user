@@ -243,14 +243,8 @@
         "LB": "Lebanon (+961)"
       },
       "branding": {
-        "titlePrefix": "Let's Journey With",
-        "titleHighlight": "E-Commerce.",
-        "description": "Join thousands of tech enthusiasts. Get exclusive access to the latest hardware, dev tools, and premium support.",
-        "bullets": {
-          "freeShipping": "Free shipping on orders over $50",
-          "support247": "24/7 customer support",
-          "moneyBack": "30-day money-back guarantee"
-        }
+        "titlePrefix": "Let's Make Shopping With",
+        "titleHighlight": "E-Commerce."
       },
       "form": {
         "firstNameLabel": "First Name",
@@ -268,7 +262,7 @@
       },
       "terms": {
         "prefix": "I agree to the",
-        "termsOfService": "Terms of Service",
+        "termsOfService": "Terms and Conditions",
         "and": "and",
         "privacyPolicy": "Privacy Policy"
       },
