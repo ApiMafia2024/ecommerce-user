@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
-import { Loader2, Cpu, Search, User, ShoppingCart, HelpCircle } from 'lucide-react'
+import { Loader2, Cpu, Search, User, ShoppingCart, HelpCircle , ReceiptText , Info  , MessageCircleQuestionMark , Mail} from 'lucide-react'
 import { ThemeToggle } from './ThemeToggle'
 import {
   DropdownMenu,
@@ -174,16 +174,24 @@ const Navbar = () => {
               className="w-56 bg-white dark:bg-[#2d3238] border border-[#e8edf2] dark:border-[#3a3f45] shadow-xl rounded-xl p-2"
             >
               <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                <Link href="/terms">{t('terms')}</Link>
+                <Link href="/terms">
+                <ReceiptText /> {t('terms')}
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                <Link href="/about-us">{t('aboutUs')}</Link>
+                <Link href="/about-us">
+                <Info/>
+                {t('aboutUs')}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                <Link href="/faqs">{t('faqs')}</Link>
+                <Link href="/faqs">
+                <MessageCircleQuestionMark/>
+                {t('faqs')}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="cursor-pointer rounded-lg">
-                <Link href="/contact">{t('contactUs')}</Link>
+                <Link href="/contact">
+                <Mail />
+                {t('contactUs')}</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

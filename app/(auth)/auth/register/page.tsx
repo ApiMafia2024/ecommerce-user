@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Loader2, Cpu, User, Mail, Phone, Lock } from "lucide-react";
+import { Loader2, Cpu, User, Mail, Phone, Lock, AlertCircle } from "lucide-react";
 import { FormInput, Alert } from "@/components/ui";
 import { createRegisterSchema, RegisterFormData } from "@/validations/auth.validations";
 import { useRegisterMutation, useSendOtpMutation } from "@/hooks/mutations/useAuthMutations";
@@ -187,26 +187,44 @@ export default function RegisterPage() {
               />
 
               {/* Phone with Country Code */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <FormInput
-                  type="select"
-                  label={t("register.form.countryLabel")}
-                  id="phone_country"
-                  options={phoneCountries}
-                  error={errors.phone_country}
-                  {...register("phone_country")}
-                />
-                <div className="md:col-span-2">
-                  <FormInput
-                    type="tel"
-                    label={t("register.form.phoneLabel")}
-                    id="phone"
-                    placeholder={t("register.form.phonePlaceholder")}
-                    leftIcon={Phone}
-                    error={errors.phone}
-                    {...register("phone")}
-                  />
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 outline-none focus-visible:outline-none">
+                  {t("register.form.phoneLabel")}
+                </label>
+                <div className={`flex items-center rounded-md border relative overflow-hidden ${
+                  errors.phone || errors.phone_country 
+                    ? "border-red-500 " 
+                    : "border-slate-200 dark:border-slate-700"
+                }`}>
+                  <div className="w-[110px] md:w-[130px] flex-shrink-0 border-r border-slate-200 dark:border-slate-700">
+                    <FormInput
+                      type="select"
+                      id="phone_country"
+                      options={phoneCountries}
+                      error={undefined}
+                      {...register("phone_country")}
+                      value={watch("phone_country")}
+                      inputClassName="border-0 shadow-none bg-transparent outline-none !focus-visible:outline-none"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <FormInput
+                      type="tel"
+                      id="phone"
+                      placeholder={t("register.form.phonePlaceholder")}
+                      leftIcon={Phone}
+                      error={undefined}
+                      {...register("phone")}
+                      inputClassName="border-0 shadow-none bg-transparent outline-none !focus-visible:outline-none"
+                    />
+                  </div>
                 </div>
+                {(errors.phone || errors.phone_country) && (
+                  <p className="mt-1.5 text-sm text-red-500 dark:text-red-400 flex items-center gap-1">
+                    <AlertCircle className="w-4 h-4" />
+                    {errors.phone?.message || errors.phone_country?.message}
+                  </p>
+                )}
               </div>
 
               {/* Password Fields */}

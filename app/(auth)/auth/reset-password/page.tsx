@@ -297,44 +297,8 @@ export default function ResetPasswordPage() {
               </Link>
             </form>
           </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-slate-500 dark:text-slate-400">
-              {t("resetPassword.havingTrouble")}{" "}
-              <Link className="text-blue-500 font-medium" href="#">
-                {t("resetPassword.contactSupport")}
-              </Link>
-            </p>
-          </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="p-8 border-t border-slate-200 dark:border-slate-800">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-500 dark:text-slate-400">{t("resetPassword.footer.copyright", { year: currentYear })}</p>
-          <div className="flex gap-6">
-            <Link
-              className="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors"
-              href="/terms"
-            >
-              {t("resetPassword.footer.privacyPolicy")}
-            </Link>
-            <Link
-              className="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors"
-              href="/terms"
-            >
-              {t("resetPassword.footer.termsOfService")}
-            </Link>
-            <Link
-              className="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors"
-              href="#"
-            >
-              {t("resetPassword.footer.helpCenter")}
-            </Link>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
