@@ -104,26 +104,26 @@ export default function RegisterPage() {
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Side - Branding */}
         <div className="hidden lg:flex lg:col-span-6 flex-col justify-center space-y-8 pr-12">
-         <Link href="/" className="flex items-center space-x-4">
-                   {siteLogo ? (
-                     <div className="relative w-12 h-12">
-                       <Image
-                         src={siteLogo}
-                         alt={siteName || 'Logo'}
-                         fill
-                         className="object-contain"
-                         unoptimized
-                       />
-                     </div>
-                   ) : (
-                     <div className="bg-blue-600 p-2 rounded-xl">
-                       <Cpu className="text-white w-8 h-8" />
-                     </div>
-                   )}
-                   <span className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-                     {siteName || 'API Tech'}
-                   </span>
-                 </Link>
+          <Link href="/" className="flex items-center space-x-4">
+            {siteLogo ? (
+              <div className="relative w-12 h-12">
+                <Image
+                  src={siteLogo}
+                  alt={siteName || 'Logo'}
+                  fill
+                  className="object-contain"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <div className="bg-blue-600 p-2 rounded-xl">
+                <Cpu className="text-white w-8 h-8" />
+              </div>
+            )}
+            <span className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              {siteName || 'API Tech'}
+            </span>
+          </Link>
           <div className="space-y-4">
             <h2 className="text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
               {t("register.branding.titlePrefix")}{" "}
@@ -188,15 +188,14 @@ export default function RegisterPage() {
 
               {/* Phone with Country Code */}
               <div>
-                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 outline-none focus-visible:outline-none">
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                   {t("register.form.phoneLabel")}
                 </label>
-                <div className={`flex items-center rounded-md border relative overflow-hidden ${
-                  errors.phone || errors.phone_country 
-                    ? "border-red-500 " 
-                    : "border-slate-200 dark:border-slate-700"
-                }`}>
-                  <div className="w-[110px] md:w-[130px] flex-shrink-0 border-r border-slate-200 dark:border-slate-700">
+                <div className={`flex items-center rounded-md border relative overflow-hidden focus-within:ring-0 focus-within:border-slate-200 dark:focus-within:border-slate-700 ${errors.phone || errors.phone_country
+                  ? "border-red-500 "
+                  : "border-slate-200 dark:border-slate-700"
+                  }`}>
+                  <div className="w-[110px] md:w-[130px] flex-shrink-0 border-r border-slate-200 dark:border-slate-700 focus-within:ring-0">
                     <FormInput
                       type="select"
                       id="phone_country"
@@ -204,10 +203,10 @@ export default function RegisterPage() {
                       error={undefined}
                       {...register("phone_country")}
                       value={watch("phone_country")}
-                      inputClassName="border-0 shadow-none bg-transparent outline-none !focus-visible:outline-none"
+                      inputClassName="border-0 shadow-none bg-transparent outline-none focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
                     />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 focus-within:ring-0">
                     <FormInput
                       type="tel"
                       id="phone"
@@ -215,7 +214,7 @@ export default function RegisterPage() {
                       leftIcon={Phone}
                       error={undefined}
                       {...register("phone")}
-                      inputClassName="border-0 shadow-none bg-transparent outline-none !focus-visible:outline-none"
+                      inputClassName="border-0 shadow-none bg-transparent outline-none focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
                     />
                   </div>
                 </div>
