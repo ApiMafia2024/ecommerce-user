@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { FormInput } from '@/components/ui';
 import { Breadcrumbs } from '@/components/shared/Breadcrumbs';
 import { FileUpload } from '@/components/contact/FileUpload';
+import { PhoneInput } from '@/components/shared/PhoneInput';
 import { useFormErrorHandler } from '@/hooks/useFormErrorHandler';
 import { Alert } from '@/components/ui';
 import { MapPin, Phone, AtSign, Share2, Send, Github, Twitter, Linkedin } from 'lucide-react';
@@ -19,7 +20,8 @@ import { Link } from '@/i18n/navigation';
 interface ContactFormData {
   fullName: string;
   businessEmail: string;
-  phoneNumber: string;
+  phone: string;
+  phone_country: string;
   subject: string;
   message: string;
 }
@@ -28,7 +30,7 @@ export default function ContactPage() {
   const t = useTranslations('ContactPage');
   const c = useTranslations('Common');
   const { officeLocation, phone, emails, github, twitter, linkedin } = useSettingsContext();
-  const { register, handleSubmit, formState: { errors }, setError, reset } = useForm<ContactFormData>();
+  const { register, handleSubmit, watch, formState: { errors }, setError, reset } = useForm<ContactFormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
   const { alert, handleError, handleSuccess, clearAlert } = useFormErrorHandler<ContactFormData>(setError, {
@@ -40,11 +42,13 @@ export default function ContactPage() {
   const onSubmit = async (data: ContactFormData) => {
     clearAlert();
     setIsSubmitting(true);
-    
+
     try {
       const formData = new FormData();
       formData.append('name', data.fullName);
       formData.append('email', data.businessEmail);
+      formData.append('phone', data.phone);
+      formData.append('phone_country', data.phone_country);
       formData.append('subject', data.subject);
       formData.append('message', data.message);
       uploadedFiles.forEach((file, index) => {
@@ -80,9 +84,6 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-[#0e181b] dark:text-white">
             {t('title')}
           </h1>
-          <p className="text-lg text-[#4e8597] dark:text-gray-400 max-w-2xl">
-            {t('subtitle')}
-          </p>
         </div>
 
         {/* Alert Banner */}
@@ -105,7 +106,7 @@ export default function ContactPage() {
               <h3 className="text-2xl font-bold border-l-4 border-primary pl-4 text-[#0e181b] dark:text-white">
                 {t('companyInfo.title')}
               </h3>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Office Location */}
                 <div className="bg-white dark:bg-[#2d3439] p-6 rounded-xl border border-[#d0e1e7] dark:border-[#3a424a] hover:border-primary/50 transition-colors">
@@ -159,9 +160,9 @@ export default function ContactPage() {
                     <h4 className="font-bold text-base mb-1 text-[#0e181b] dark:text-white">{t('companyInfo.socials.title')}</h4>
                     <div className="flex flex-wrap gap-3 mt-2">
                       {github && (
-                        <a 
-                          href={github} 
-                          target="_blank" 
+                        <a
+                          href={github}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:opacity-70 transition-opacity flex items-center gap-1"
                         >
@@ -170,9 +171,9 @@ export default function ContactPage() {
                         </a>
                       )}
                       {linkedin && (
-                        <a 
-                          href={linkedin} 
-                          target="_blank" 
+                        <a
+                          href={linkedin}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:opacity-70 transition-opacity flex items-center gap-1"
                         >
@@ -181,9 +182,9 @@ export default function ContactPage() {
                         </a>
                       )}
                       {twitter && (
-                        <a 
-                          href={twitter} 
-                          target="_blank" 
+                        <a
+                          href={twitter}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:opacity-70 transition-opacity flex items-center gap-1"
                         >
@@ -220,7 +221,7 @@ export default function ContactPage() {
               <h3 className="text-2xl font-bold mb-8 text-[#0e181b] dark:text-white">
                 {t('form.title')}
               </h3>
-              
+
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Full Name and Business Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -230,7 +231,7 @@ export default function ContactPage() {
                     error={errors.fullName}
                     {...register('fullName', { required: t('form.fullName.required') })}
                   />
-                  
+
                   <FormInput
                     type="email"
                     label={t('form.businessEmail.label')}
@@ -248,25 +249,13 @@ export default function ContactPage() {
 
                 {/* Phone Number and Subject */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <PhoneInput register={register} errors={errors} watch={watch} />
+
                   <FormInput
-                    type="tel"
-                    label={t('form.phoneNumber.label')}
-                    placeholder={t('form.phoneNumber.placeholder')}
-                    error={errors.phoneNumber}
-                    {...register('phoneNumber', { required: t('form.phoneNumber.required') })}
-                  />
-                  
-                  <FormInput
-                    type="select"
+                    type="text"
                     label={t('form.subject.label')}
                     placeholder={t('form.subject.placeholder')}
                     error={errors.subject}
-                    options={[
-                      { value: 'Technical Support', label: t('form.subject.options.technicalSupport') },
-                      { value: 'Sales Inquiry', label: t('form.subject.options.salesInquiry') },
-                      { value: 'API Partnerships', label: t('form.subject.options.apiPartnerships') },
-                      { value: 'Billing Question', label: t('form.subject.options.billingQuestion') },
-                    ]}
                     {...register('subject', { required: t('form.subject.required') })}
                   />
                 </div>
@@ -296,7 +285,7 @@ export default function ContactPage() {
                     </Link>{' '}
                     {t('privacy.suffix')}
                   </p>
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}

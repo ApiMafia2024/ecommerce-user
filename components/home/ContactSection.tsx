@@ -26,10 +26,10 @@ export function ContactSection({ className = '' }: { className?: string }) {
     try {
       // TODO: Implement contact form submission API call
       console.log('Contact form submitted:', data);
-      
+
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+
       reset();
       showToast(t('toast.success'), 'success');
     } catch (error) {
@@ -49,7 +49,7 @@ export function ContactSection({ className = '' }: { className?: string }) {
         <p className="text-gray-500 dark:text-gray-400 mb-8">
           {t('subtitle')}
         </p>
-        
+
         <div className="space-y-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
@@ -62,7 +62,7 @@ export function ContactSection({ className = '' }: { className?: string }) {
               </p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
               <Mail className="w-6 h-6" />
@@ -86,7 +86,7 @@ export function ContactSection({ className = '' }: { className?: string }) {
             error={errors.fullName}
             {...register('fullName', { required: t('form.fullName.required') })}
           />
-          
+
           <FormInput
             type="email"
             label={t('form.email.label')}
@@ -101,14 +101,14 @@ export function ContactSection({ className = '' }: { className?: string }) {
             })}
           />
         </div>
-        
+
         <FormInput
           label={t('form.subject.label')}
           placeholder={t('form.subject.placeholder')}
           error={errors.subject}
           {...register('subject', { required: t('form.subject.required') })}
         />
-        
+
         <FormInput
           type="textarea"
           label={t('form.message.label')}
@@ -117,7 +117,7 @@ export function ContactSection({ className = '' }: { className?: string }) {
           error={errors.message}
           {...register('message', { required: t('form.message.required') })}
         />
-        
+
         <button
           type="submit"
           disabled={isSubmitting}
