@@ -500,12 +500,12 @@
       "title": "Security & Access",
       "subtitle": "Manage your password and authentication preferences to keep your API tokens safe.",
       "cardTitle": "Change Password",
-      "cardDescription": "Ensure your password is at least 12 characters long to stay compliant with API Tech security standards. Avoid using common phrases.",
+      "cardDescription": "Ensure your password is at least 8 characters long to stay compliant with API Tech security standards. Avoid using common phrases.",
       "form": {
         "currentPasswordLabel": "Current Password",
         "currentPasswordPlaceholder": "Enter old password",
         "newPasswordLabel": "New Password",
-        "newPasswordPlaceholder": "Min 12 characters",
+        "newPasswordPlaceholder": "Min 8 characters",
         "confirmNewPasswordLabel": "Confirm New Password",
         "confirmNewPasswordPlaceholder": "Repeat new password"
       },
@@ -517,7 +517,7 @@
         "strong": "Strong"
       },
       "requirements": {
-        "minChars": "At least 12 characters",
+        "minChars": "At least 8 characters",
         "oneUppercase": "One uppercase letter",
         "oneSpecial": "One special character",
         "oneNumber": "One numerical digit"
@@ -900,4 +900,3 @@
     }
   }
 }
-

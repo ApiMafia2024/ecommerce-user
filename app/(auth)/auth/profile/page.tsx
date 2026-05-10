@@ -60,7 +60,7 @@ export default function ProfilePage() {
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [paymentError, setPaymentError] = useState<string | null>(null);
   const processedTransactionIdRef = useRef<string | null>(null);
-  
+
   const paymentCallback = usePaymentCallback();
 
   useEffect(() => {
@@ -68,12 +68,12 @@ export default function ProfilePage() {
     // Only process if we have a transaction_id and haven't processed it yet
     if (txId && processedTransactionIdRef.current !== txId) {
       processedTransactionIdRef.current = txId;
-      
+
       // Use setTimeout to defer state updates outside the effect body
       setTimeout(() => {
         setShowPaymentModal(true);
         setPaymentError(null);
-        
+
         // Call the payment callback endpoint
         paymentCallback.mutate(
           { transaction_id: txId },
@@ -98,11 +98,11 @@ export default function ProfilePage() {
     setShowPaymentModal(false);
     setPaymentError(null);
     processedTransactionIdRef.current = null;
-    
+
     // Remove transaction_id from URL
     const params = new URLSearchParams(searchParams.toString());
     params.delete('transaction_id');
-    const newUrl = params.toString() 
+    const newUrl = params.toString()
       ? `${pathname}?${params.toString()}`
       : pathname;
     router.replace(newUrl);
@@ -119,7 +119,6 @@ export default function ProfilePage() {
   return (
     <>
       <Navbar />
-
       <main className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           <ProfileSidebar
@@ -155,7 +154,7 @@ export default function ProfilePage() {
                   clearAlert={clearAlert}
                 />
 
-                <ConnectedAccounts />
+                {/* <ConnectedAccounts /> */}
               </>
             ) : activeTab === "change-password" && profile?.data?.socialite_account === false ? (
               <ChangePasswordTab />
@@ -168,7 +167,7 @@ export default function ProfilePage() {
         </div>
       </main>
 
-      <ProfileFooter />
+      {/* <ProfileFooter /> */}
 
       {/* Payment Success Modal */}
       <PaymentSuccessModal

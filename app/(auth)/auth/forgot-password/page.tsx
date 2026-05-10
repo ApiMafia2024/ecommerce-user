@@ -129,42 +129,6 @@ export default function ForgotPasswordPage() {
           </form>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="max-w-7xl mx-auto px-8 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-slate-200 dark:border-slate-800">
-          <div className="flex items-start gap-4">
-            <CheckCircle2 className="w-6 h-6 text-blue-500" />
-            <div>
-              <h4 className="font-bold text-sm text-slate-900 dark:text-white">{t("forgotPassword.footer.officialAuth.title")}</h4>
-              <p className="text-xs text-slate-500 mt-1">
-                {t("forgotPassword.footer.officialAuth.description")}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <Shield className="w-6 h-6 text-blue-500" />
-            <div>
-              <h4 className="font-bold text-sm text-slate-900 dark:text-white">{t("forgotPassword.footer.encryption.title")}</h4>
-              <p className="text-xs text-slate-500 mt-1">
-                {t("forgotPassword.footer.encryption.description")}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <Headphones className="w-6 h-6 text-blue-500" />
-            <div>
-              <h4 className="font-bold text-sm text-slate-900 dark:text-white">{t("forgotPassword.footer.needHelp.title")}</h4>
-              <p className="text-xs text-slate-500 mt-1">
-                {t("forgotPassword.footer.needHelp.description")}
-              </p>
-            </div>
-          </div>
-        </div>
-        <p className="text-center text-xs text-slate-400 mt-12">
-          {t("forgotPassword.footer.copyright", { year: currentYear })}
-        </p>
-      </footer>
     </>
   );
 }

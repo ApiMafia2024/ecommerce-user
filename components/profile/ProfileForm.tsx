@@ -1,15 +1,15 @@
 "use client";
 
-import { Loader2, User, Phone, AtSign, Info } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { Loader2, User, AtSign, Info, Camera } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { UseFormReturn, UseFieldArrayReturn } from "react-hook-form";
 import { FormInput, Alert } from "@/components/ui";
 import { FileUpload } from "@/components/contact/FileUpload";
 import { LocationsSection } from "./LocationsSection";
 import { ProfileUpdateFormData } from "@/validations/auth.validations";
 import { AlertState } from "@/hooks/useFormErrorHandler";
-import { usePhoneCountries } from "@/hooks/usePhoneCountries";
 import { useProfile } from "@/hooks/queries/useProfile";
+import { PhoneInput } from "../shared/PhoneInput";
 
 interface ProfileFormProps {
   form: UseFormReturn<ProfileUpdateFormData>;
@@ -43,9 +43,7 @@ export function ProfileForm({
   clearAlert,
 }: ProfileFormProps) {
   const t = useTranslations("Auth");
-  const locale = useLocale();
   const { register, handleSubmit, watch, reset, formState: { errors } } = form;
-  const phoneCountries = usePhoneCountries();
   const { data: profile } = useProfile();
   const lastUpdated = profile?.data?.last_update;
   return (
@@ -72,13 +70,33 @@ export function ProfileForm({
           {/* Profile Photo */}
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row items-center gap-6">
-              <div className="relative group">
-                <div className="w-32 h-32 rounded-2xl overflow-hidden ring-4 ring-slate-100 dark:ring-slate-800/50">
-                  <img
-                    alt={t("profile.alt.currentProfile")}
-                    className="w-full h-full object-cover"
-                    src={previewImageUrl}
-                  />
+              <div className="relative group cursor-pointer">
+                <input
+                  type="file"
+                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                  accept="image/jpeg, image/jpg, image/png, image/webp"
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files.length > 0) {
+                      handleFilesChange(Array.from(e.target.files));
+                    }
+                  }}
+                />
+                <div className="w-32 h-32 rounded-2xl overflow-hidden ring-4 ring-slate-100 dark:ring-slate-800/50 relative">
+                  {previewImageUrl && !previewImageUrl.includes('default') && !previewImageUrl.includes('placeholder') ? (
+                    <img
+                      alt={t("profile.alt.currentProfile")}
+                      className="w-full h-full object-cover"
+                      src={previewImageUrl}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 text-4xl font-bold uppercase tracking-wider">
+                      {(watch("first_name")?.[0] || "") + (watch("last_name")?.[0] || "") || "?"}
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <Camera className="w-6 h-6 text-white mb-1" />
+                    <span className="text-white text-xs font-medium text-center px-2">{t("profile.photo.changePhoto")}</span>
+                  </div>
                 </div>
               </div>
               <div className="text-center sm:text-left flex-1">
@@ -99,17 +117,10 @@ export function ProfileForm({
                 )}
               </div>
             </div>
-            <FileUpload
-              maxSize={2}
-              onFilesChange={handleFilesChange}
-              className="max-w-full"
-            />
           </div>
-
-          <hr className="border-slate-200 dark:border-slate-800" />
-
           {/* Form Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* First Name Input */}
             <FormInput
               label={t("profile.form.firstName")}
               id="first_name"
@@ -118,6 +129,7 @@ export function ProfileForm({
               error={errors.first_name}
               {...register("first_name")}
             />
+            {/* Last Name Input */}
             <FormInput
               label={t("profile.form.lastName")}
               id="last_name"
@@ -126,25 +138,9 @@ export function ProfileForm({
               error={errors.last_name}
               {...register("last_name")}
             />
-            <FormInput
-              type="select"
-              label={t("profile.form.country")}
-              id="phone_country"
-              placeholder={t("profile.form.phonePlaceholder")}
-              leftIcon={Phone}
-              options={phoneCountries}
-              error={errors.phone_country}
-              {...register("phone_country")}
-            />
-            <FormInput
-              type="tel"
-              label={t("profile.form.phoneNumber")}
-              id="phone"
-              placeholder={t("profile.form.phonePlaceholder")}
-              leftIcon={Phone}
-              error={errors.phone}
-              {...register("phone")}
-            />
+            {/* Phone Country Input */}
+            <PhoneInput register={register} errors={errors} watch={watch} className="md:col-span-2 " />
+            {/* Email Input */}
             <FormInput
               type="email"
               label={t("profile.form.emailReadOnly")}

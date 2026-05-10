@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { UseFormRegister, FieldErrors, UseFormWatch, FieldArrayWithId } from "react-hook-form";
 import { FormInput } from "@/components/ui";
 import { ProfileUpdateFormData, LocationFormData } from "@/validations/auth.validations";
+import { usePhoneCountries } from "@/hooks/usePhoneCountries";
 
 interface LocationItemProps {
   index: number;
@@ -17,6 +18,7 @@ interface LocationItemProps {
 
 export function LocationItem({ index, field, register, errors, watch, onRemove }: LocationItemProps) {
   const t = useTranslations("Auth");
+  const phoneCountries = usePhoneCountries();
   const locationId = watch(`locations.${index}.id` as const);
 
   return (
@@ -45,12 +47,14 @@ export function LocationItem({ index, field, register, errors, watch, onRemove }
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormInput
+          type="select"
           label={t("profile.form.country2")}
           id={`locations.${index}.country`}
           placeholder={t("profile.form.country2")}
-          leftIcon={MapPin}
+          options={phoneCountries}
           error={errors.locations?.[index]?.country}
           {...register(`locations.${index}.country` as const)}
+          value={watch(`locations.${index}.country` as const)}
         />
         <FormInput
           label={t("profile.form.city")}

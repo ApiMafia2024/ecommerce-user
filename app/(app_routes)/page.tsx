@@ -117,13 +117,13 @@ export default function Home() {
   // }
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark font-display text-[#0f141a] dark:text-white antialiased transition-colors duration-200">
-      <a 
-        href="#main-content" 
+      <a
+        href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg"
       >
         {t('skipToMain')}
       </a>
-      <main 
+      <main
         id="main-content"
         className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8"
         role="main"
@@ -161,7 +161,7 @@ export default function Home() {
               </div>
 
               {displayHotOffers && displayHotOffers.length > 0 && !productsError ? (
-                <div 
+                <div
                   className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,220px)] gap-4"
                   role="list"
                   aria-label={t('aria.hotOffersProducts')}
@@ -188,7 +188,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-              ) : (productsError ) ? (
+              ) : (productsError) ? (
                 <div className="p-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
                   <div className="flex items-center gap-3">
                     <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400" />

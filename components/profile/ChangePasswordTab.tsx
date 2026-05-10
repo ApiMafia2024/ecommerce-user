@@ -84,30 +84,9 @@ export function ChangePasswordTab() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t('changePassword.title')}</h2>
-        <p className="text-slate-500 dark:text-slate-400 mt-1">{t('changePassword.subtitle')}</p>
-      </div>
-
       <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-sm">
-        <div className="p-6 md:p-8 flex flex-col md:flex-row gap-8">
-          {/* Left Info Column */}
-          <div className="md:w-1/3 space-y-4">
-            <div className="h-48 w-full bg-blue-600/5 dark:bg-blue-600/10 rounded-lg flex items-center justify-center border border-blue-600/20 relative overflow-hidden group">
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-600 via-transparent to-transparent" />
-              <LockKeyhole className="w-16 h-16 text-blue-600 group-hover:scale-110 transition-transform" />
-            </div>
-            <div>
-              <h3 className="text-slate-900 dark:text-white font-bold text-lg mb-2">
-                {t('changePassword.cardTitle')}
-              </h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                {t('changePassword.cardDescription')}
-              </p>
-            </div>
-          </div>
-
-          {/* Right Form Column */}
+        <div className="p-6 md:p-8 flex flex-col md:flex-row gap-8 justify-center items-center">
+          {/* Form Column */}
           <div className="md:w-2/3">
             {alert.isVisible && (
               <div className="mb-6">
@@ -121,7 +100,7 @@ export function ChangePasswordTab() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
               {/* Current Password */}
               <FormInput
                 type="password"
@@ -175,11 +154,10 @@ export function ChangePasswordTab() {
                 {newPassword && (
                   <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <li
-                      className={`flex items-center gap-2 text-xs ${
-                        newPassword.length >= 12 ? 'text-green-500' : 'text-slate-500'
-                      }`}
+                      className={`flex items-center gap-2 text-xs ${newPassword.length >= 12 ? 'text-green-500' : 'text-slate-500'
+                        }`}
                     >
-                      {newPassword.length >= 12 ? (
+                      {newPassword.length >= 8 ? (
                         <CheckCircle2 className="w-4 h-4" />
                       ) : (
                         <Circle className="w-4 h-4" />
@@ -187,9 +165,8 @@ export function ChangePasswordTab() {
                       {t('changePassword.requirements.minChars')}
                     </li>
                     <li
-                      className={`flex items-center gap-2 text-xs ${
-                        /[A-Z]/.test(newPassword) ? 'text-green-500' : 'text-slate-500'
-                      }`}
+                      className={`flex items-center gap-2 text-xs ${/[A-Z]/.test(newPassword) ? 'text-green-500' : 'text-slate-500'
+                        }`}
                     >
                       {/[A-Z]/.test(newPassword) ? (
                         <CheckCircle2 className="w-4 h-4" />
@@ -199,9 +176,8 @@ export function ChangePasswordTab() {
                       {t('changePassword.requirements.oneUppercase')}
                     </li>
                     <li
-                      className={`flex items-center gap-2 text-xs ${
-                        /[^A-Za-z0-9]/.test(newPassword) ? 'text-green-500' : 'text-slate-500'
-                      }`}
+                      className={`flex items-center gap-2 text-xs ${/[^A-Za-z0-9]/.test(newPassword) ? 'text-green-500' : 'text-slate-500'
+                        }`}
                     >
                       {/[^A-Za-z0-9]/.test(newPassword) ? (
                         <CheckCircle2 className="w-4 h-4" />
@@ -211,9 +187,8 @@ export function ChangePasswordTab() {
                       {t('changePassword.requirements.oneSpecial')}
                     </li>
                     <li
-                      className={`flex items-center gap-2 text-xs ${
-                        /[0-9]/.test(newPassword) ? 'text-green-500' : 'text-slate-500'
-                      }`}
+                      className={`flex items-center gap-2 text-xs ${/[0-9]/.test(newPassword) ? 'text-green-500' : 'text-slate-500'
+                        }`}
                     >
                       {/[0-9]/.test(newPassword) ? (
                         <CheckCircle2 className="w-4 h-4" />
@@ -239,12 +214,9 @@ export function ChangePasswordTab() {
               />
 
               {/* Action Footer */}
-              <div className="pt-4 flex flex-col sm:flex-row gap-4 items-center justify-between">
-                <Link className="text-sm text-blue-600 hover:underline font-medium" href="/auth/forgot-password">
-                  {t('changePassword.forgotCurrentPassword')}
-                </Link>
+              <div className="pt-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
                 <button
-                  className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg shadow-blue-600/20 hover:bg-blue-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto px-8 py-3 bg-blue-600 self-center text-white font-bold rounded-lg shadow-lg shadow-blue-600/20 hover:bg-blue-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   type="submit"
                   disabled={isChangingPassword}
                 >
@@ -263,19 +235,6 @@ export function ChangePasswordTab() {
               </div>
             </form>
           </div>
-        </div>
-      </div>
-
-      <div className="p-6 rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 flex items-start gap-4">
-        <Info className="w-5 h-5 text-blue-600 p-2 bg-blue-600/10 rounded-lg" />
-        <div>
-          <h4 className="text-slate-900 dark:text-white font-bold text-sm">{t('changePassword.twoFactor.title')}</h4>
-          <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
-            {t('changePassword.twoFactor.description')}{' '}
-            <Link className="text-blue-600 hover:underline font-medium ml-1" href="#">
-              {t('changePassword.twoFactor.configureLink')}
-            </Link>
-          </p>
         </div>
       </div>
     </div>
