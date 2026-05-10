@@ -249,7 +249,7 @@ export default function ContactPage() {
 
                 {/* Phone Number and Subject */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <PhoneInput register={register} errors={errors} watch={watch} />
+                  <PhoneInput register={register} errors={errors} watch={watch} className="!w-[25%] !md:w-[25%]" />
 
                   <FormInput
                     type="text"
@@ -273,19 +273,11 @@ export default function ContactPage() {
                 {/* File Upload */}
                 <FileUpload
                   onFilesChange={setUploadedFiles}
-                  maxSize={10}
+                  maxSize={2}
                 />
 
                 {/* Submit Button and Privacy Notice */}
-                <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p className="text-xs text-[#4e8597] dark:text-gray-400 max-w-xs italic">
-                    {t('privacy.prefix')}{' '}
-                    <Link href="/terms" className="underline hover:text-primary">
-                      {t('privacy.privacyPolicy')}
-                    </Link>{' '}
-                    {t('privacy.suffix')}
-                  </p>
-
+                <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button
                     type="submit"
                     disabled={isSubmitting}

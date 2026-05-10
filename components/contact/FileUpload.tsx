@@ -230,8 +230,11 @@ export function FileUpload({
       status: 'pending' as const,
     }));
 
-    setUploadedFiles((prev) => [...prev, ...newFiles]);
-    onFilesChange?.(validFiles);
+    setUploadedFiles((prev) => {
+      const next = [...prev, ...newFiles];
+      onFilesChange?.(next.map(f => f.file));
+      return next;
+    });
 
     // Start uploads
     newFiles.forEach((file) => {

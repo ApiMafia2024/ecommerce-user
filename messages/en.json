@@ -687,7 +687,7 @@
       },
       "message": {
         "label": "Message",
-        "placeholder": "Tell us about your technical requirements...",
+        "placeholder": "Tell us about your problem...",
         "required": "Message is required"
       },
       "sending": "Sending...",

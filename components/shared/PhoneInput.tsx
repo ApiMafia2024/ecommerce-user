@@ -8,7 +8,7 @@ export function PhoneInput({ register, errors, watch, className }: any) {
     const phoneCountries = usePhoneCountries();
 
     return (
-        <div className={className}>
+        <div >
             <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 {t("register.form.phoneLabel")}
             </label>
@@ -16,7 +16,7 @@ export function PhoneInput({ register, errors, watch, className }: any) {
                 ? "border-red-500 "
                 : "border-slate-200 dark:border-slate-700"
                 }`}>
-                <div className="w-[140px] md:w-[150px] flex-shrink-0 border-r border-slate-200 dark:border-slate-700 focus-within:ring-0">
+                <div className={`${className ? className : "w-[130px] md:w-[145px]"} flex-shrink-0 border-r border-slate-200 dark:border-slate-700 focus-within:ring-0`}>
                     <FormInput
                         type="select"
                         id="phone_country"
