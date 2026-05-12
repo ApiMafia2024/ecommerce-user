@@ -233,7 +233,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/auth/register"
-                className="px-4 py-2 text-sm font-semibold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
+                className="px-4 py-2 text-sm font-semibold bg-[#F2720D] text-white rounded-lg hover:bg-[#ea7a389e] transition-colors shadow-sm"
               >
                 {t('signUp')}
               </Link>

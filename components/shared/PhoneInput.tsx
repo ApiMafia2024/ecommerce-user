@@ -16,7 +16,7 @@ export function PhoneInput({ register, errors, watch, className }: any) {
                 ? "border-red-500 "
                 : "border-slate-200 dark:border-slate-700"
                 }`}>
-                <div className={`${className ? className : "w-[130px] md:w-[145px]"} flex-shrink-0 border-r border-slate-200 dark:border-slate-700 focus-within:ring-0`}>
+                <div className={`${className ? className : "w-[35%] md:w-[40%]"} flex-shrink-0 border-r border-slate-200 dark:border-slate-700 focus-within:ring-0`}>
                     <FormInput
                         type="select"
                         id="phone_country"
@@ -27,7 +27,7 @@ export function PhoneInput({ register, errors, watch, className }: any) {
                         inputClassName="border-0 shadow-none bg-transparent outline-none focus:outline-none focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none"
                     />
                 </div>
-                <div className="flex-1 focus-within:ring-0">
+                <div className="flex-1 focus-within:ring-0 !w-[60%] !md:w-[65%]">
                     <FormInput
                         type="tel"
                         id="phone"

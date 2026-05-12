@@ -12,7 +12,7 @@
     "faqs": "الأسئلة الشائعة",
     "contactUs": "تواصل معنا",
     "language": "اللغة",
-    "english": "الإنجليزية",
+    "english": "English",
     "arabic": "العربية"
   },
   "HomePage": {
@@ -22,7 +22,7 @@
     "suggestedForYou": "مقترح لك",
     "unableToLoadHotOffers": "تعذر تحميل العروض",
     "showingFallback": "يتم عرض منتجات بديلة. يرجى تحديث الصفحة والمحاولة مرة أخرى.",
-   "category": "الفئة",
+    "category": "الفئة",
     "unableToLoadProducts": "تعذر تحميل المنتجات",
     "toast": {
       "addedToCart": "تمت إضافة المنتج إلى السلة!"
@@ -906,4 +906,3 @@
     }
   }
 }
-
