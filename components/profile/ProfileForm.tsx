@@ -4,12 +4,13 @@ import { Loader2, User, AtSign, Info, Camera } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { UseFormReturn, UseFieldArrayReturn } from "react-hook-form";
 import { FormInput, Alert } from "@/components/ui";
-import { FileUpload } from "@/components/contact/FileUpload";
 import { LocationsSection } from "./LocationsSection";
 import { ProfileUpdateFormData } from "@/validations/auth.validations";
 import { AlertState } from "@/hooks/useFormErrorHandler";
 import { useProfile } from "@/hooks/queries/useProfile";
 import { PhoneInput } from "../shared/PhoneInput";
+import Avatar from 'react-avatar';
+
 
 interface ProfileFormProps {
   form: UseFormReturn<ProfileUpdateFormData>;
@@ -81,12 +82,14 @@ export function ProfileForm({
                     }
                   }}
                 />
-                <div className="w-32 h-32 rounded-2xl overflow-hidden ring-4 ring-slate-100 dark:ring-slate-800/50 relative">
+                <div className="w-28 h-28 rounded-2xl overflow-hidden ring-4 ring-slate-100 dark:ring-slate-800/50 relative">
                   {previewImageUrl && !previewImageUrl.includes('default') && !previewImageUrl.includes('placeholder') ? (
-                    <img
-                      alt={t("profile.alt.currentProfile")}
-                      className="w-full h-full object-cover"
-                      src={previewImageUrl}
+                    <Avatar
+                      name={`${watch("first_name") || ""} ${watch("last_name") || ""}`}
+                      color="#004aad"
+                      size="100%"
+                      round={false}
+                      className="w-full h-full bg-white dark:bg-slate-800"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 text-4xl font-bold uppercase tracking-wider">
@@ -139,7 +142,7 @@ export function ProfileForm({
               {...register("last_name")}
             />
             {/* Phone Country Input */}
-            <PhoneInput register={register} errors={errors} watch={watch} className="md:col-span-2 " />
+            <PhoneInput register={register} errors={errors} watch={watch} />
             {/* Email Input */}
             <FormInput
               type="email"
@@ -149,7 +152,6 @@ export function ProfileForm({
               disabled
               leftIcon={AtSign}
               defaultValue={userEmail || ""}
-              containerClassName="md:col-span-2"
             />
           </div>
 

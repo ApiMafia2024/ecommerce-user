@@ -34,13 +34,11 @@ export default function TermsPage() {
 
   return (
     <>
-      <main className="flex-1 max-w-[1440px] mx-auto w-full px-6 md:px-10 py-8 grid grid-cols-12 gap-8 items-start">
-
-
+      <main className="flex-1 max-w-[1440px] mx-auto ml-40 w-full px-4  md:px-10 py-8 grid grid-cols-12 gap-8 items-start">
         {/* Main Content Column */}
         <div className="col-span-12 lg:col-span-9 flex flex-col gap-6">
           {/* Breadcrumbs & Heading */}
-          <div className="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+          <div className="">
             <nav className="flex items-center gap-2 text-sm font-medium mb-6">
               <Link className="text-slate-500 hover:text-blue-600" href="/">
                 {t("breadcrumbs.home")}
@@ -48,21 +46,10 @@ export default function TermsPage() {
               <ChevronRight className="w-4 h-4 text-slate-500" />
               <span className="text-slate-900 dark:text-slate-300">{t("breadcrumbs.terms")}</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
-              {t("title")}
-            </h1>
-            {/* <div className="flex flex-wrap items-center gap-4 text-sm">
-              <div className="flex items-center gap-2 bg-blue-600/10 text-blue-600 px-3 py-1 rounded-full font-bold">
-                <Calendar className="w-4 h-4" />
-                {t("meta.effective", { date: effectiveDate })}
-              </div>
-              <div className="text-slate-500">{t("meta.revision", { version: "4.2.0-stable" })}</div>
-              <div className="text-slate-500">{t("meta.readingTime", { minutes: 8 })}</div>
-            </div> */}
           </div>
 
           {/* Content Body */}
-          <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl border border-slate-200 dark:border-slate-700 shadow-xl shadow-slate-200/50 dark:shadow-none mb-12">
+          <div className=" px-8 md:px-12 rounded-xl mb-12">
            
            {terms?.map((el,i) => {
             return (
@@ -72,7 +59,7 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3 mb-6">
                   <span className="text-blue-600/40">{i + 1}.</span> {el.title}
                 </h2>
-                <div className="space-y-4 text-base leading-loose text-slate-700 dark:text-slate-300">
+                <div className="space-y-4 px-4 md:px-8 text-base leading-loose text-slate-700 dark:text-slate-300">
                   <p>{el.description}</p>
                 </div>
               </section>
@@ -81,14 +68,9 @@ export default function TermsPage() {
               </div>
             )
            })}
-
-
-       
           </div>
         </div>
       </main>
-
-    
     </>
   );
 }

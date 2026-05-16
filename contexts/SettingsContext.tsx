@@ -17,8 +17,8 @@ type SettingsContextType = {
   siteName: string | undefined;
   phone: string | undefined;
   officeLocation: string | undefined;
-  emails: string[];
-  github: string | undefined;
+  emails: string| undefined;
+  facebook: string | undefined;
   twitter: string | undefined;
   linkedin: string | undefined;
   googlePlayUrl: string | undefined;
@@ -81,12 +81,12 @@ export function SettingsProvider({
     };
 
     // Computed values
-    const siteLogo = getFileSetting('site_logo');
-    const siteName = getLocalizedSetting('site_name');
-    const phone = getStringSetting('phone');
-    const officeLocation = getStringSetting('office_location');
-    const emails = getArraySetting('mails') || [];
-    const github = getStringSetting('github');
+    const siteLogo = getFileSetting('store_logo');
+    const siteName = getLocalizedSetting('store_name');
+    const phone = getStringSetting('store_phone');
+    const officeLocation = getStringSetting('store_location');
+    const emails = getStringSetting('mails');
+    const facebook = getStringSetting('facebook');
     const twitter = getStringSetting('twitter');
     const linkedin = getStringSetting('linkedin');
     const googlePlayUrl = getStringSetting('google_play_url');
@@ -104,7 +104,7 @@ export function SettingsProvider({
       phone,
       officeLocation,
       emails,
-      github,
+      facebook,
       twitter,
       linkedin,
       googlePlayUrl,

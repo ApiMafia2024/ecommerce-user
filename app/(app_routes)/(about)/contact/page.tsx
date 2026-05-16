@@ -8,7 +8,7 @@ import { FileUpload } from '@/components/contact/FileUpload';
 import { PhoneInput } from '@/components/shared/PhoneInput';
 import { useFormErrorHandler } from '@/hooks/useFormErrorHandler';
 import { Alert } from '@/components/ui';
-import { MapPin, Phone, AtSign, Share2, Send, Github, Twitter, Linkedin } from 'lucide-react';
+import { MapPin, Phone, AtSign, Share2, Send, Github, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useSettingsContext } from '@/contexts/SettingsContext';
 import { apiClient } from '@/lib/api/client';
@@ -29,7 +29,7 @@ interface ContactFormData {
 export default function ContactPage() {
   const t = useTranslations('ContactPage');
   const c = useTranslations('Common');
-  const { officeLocation, phone, emails, github, twitter, linkedin } = useSettingsContext();
+  const { officeLocation, phone, emails, facebook, twitter, linkedin } = useSettingsContext();
   const { register, handleSubmit, watch, formState: { errors }, setError, reset } = useForm<ContactFormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
@@ -137,37 +137,28 @@ export default function ContactPage() {
                   <AtSign className="w-6 h-6 text-primary mb-3 block" />
                   <h4 className="font-bold text-base mb-1 text-[#0e181b] dark:text-white">{t('companyInfo.email.title')}</h4>
                   <p className="text-sm text-[#4e8597] dark:text-gray-400">
-                    {emails.length > 0 ? (
-                      emails.map((email, index) => (
-                        <span key={index}>
-                          {email}
-                          {index < emails.length - 1 && <br />}
-                        </span>
-                      ))
-                    ) : (
-                      <>
-                        support@apitech.com<br />
-                        sales@apitech.com
-                      </>
-                    )}
+                    {
+                      <span>
+                        <a href={`mailto:${emails}`}>{emails}</a>
+                      </span>
+                    }
                   </p>
                 </div>
 
                 {/* Socials */}
-                {(github || twitter || linkedin) && (
+                {(facebook || twitter || linkedin) && (
                   <div className="bg-white dark:bg-[#2d3439] p-6 rounded-xl border border-[#d0e1e7] dark:border-[#3a424a] hover:border-primary/50 transition-colors">
                     <Share2 className="w-6 h-6 text-primary mb-3 block" />
                     <h4 className="font-bold text-base mb-1 text-[#0e181b] dark:text-white">{t('companyInfo.socials.title')}</h4>
                     <div className="flex flex-wrap gap-3 mt-2">
-                      {github && (
+                      {facebook && (
                         <a
-                          href={github}
+                          href={facebook}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:opacity-70 transition-opacity flex items-center gap-1"
                         >
-                          <Github className="w-4 h-4" />
-                          GitHub
+                          <Facebook className="w-4 h-4" />
                         </a>
                       )}
                       {linkedin && (
@@ -178,7 +169,6 @@ export default function ContactPage() {
                           className="text-primary hover:opacity-70 transition-opacity flex items-center gap-1"
                         >
                           <Linkedin className="w-4 h-4" />
-                          LinkedIn
                         </a>
                       )}
                       {twitter && (
@@ -189,7 +179,6 @@ export default function ContactPage() {
                           className="text-primary hover:opacity-70 transition-opacity flex items-center gap-1"
                         >
                           <Twitter className="w-4 h-4" />
-                          X
                         </a>
                       )}
                     </div>
@@ -197,22 +186,6 @@ export default function ContactPage() {
                 )}
               </div>
             </div>
-
-            {/* Map Placeholder */}
-            {/* <div className="w-full h-64 rounded-xl overflow-hidden grayscale contrast-125 border border-[#d0e1e7] dark:border-[#3a424a] relative group">
-              <img
-                className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxajRAJFBkjKAGTX7GKBTUaDLEcg7iPgkVS1l2HGarbqLhGYirVXS0FHS4Waow-XjLrf06JAt7Oh7XoGPXdlQLEc_-cx4rqWK4wJkWiunNUAfGY11QcuXEpesJS6RZV0sp_JLcEdIB3GmyXLnOYKR6PlD3dD6FH5a_JY6hiKxY9zjqPmXMkZxJDEo2xzWTMgAh-aTTPaVBli4FtvK9rbDcIWHrBAqpGPpvdL3aSPR7u8fxvRlTfQ1qIXeWj-sPfGmFvUXzDuKsEQ"
-                alt={t('map.imageAlt')}
-              />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors" />
-              <div className="absolute bottom-4 left-4 bg-white dark:bg-background-dark p-3 rounded-lg shadow-xl flex items-center gap-2">
-                <MapPin className="text-primary w-5 h-5" />
-                <span className="text-xs font-bold uppercase tracking-wider text-[#0e181b] dark:text-white">
-                  {t('map.badge')}
-                </span>
-              </div>
-            </div> */}
           </div>
 
           {/* Right Column: Contact Form */}
@@ -281,7 +254,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto bg-primary text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/50 text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all  disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? t('form.sending') : t('form.sendMessage')}
                     {!isSubmitting && (

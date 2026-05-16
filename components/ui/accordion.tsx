@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -23,21 +23,27 @@ const AccordionItem = React.forwardRef<
 ))
 AccordionItem.displayName = "AccordionItem"
 
+const chevronStyle = 'h-4 w-4 shrink-0 text-[#537393] dark:text-gray-400 transition-transform duration-200'
+
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
+  
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between gap-4 px-4 py-4 text-left text-sm font-extrabold text-[#0f141a] dark:text-white transition-all [&[data-state=open]>svg]:rotate-180",
+        `flex flex-1 cursor-pointer items-center gap-4 px-4 py-4 text-left text-lg font-extrabold text-[#0f141a] dark:text-white transition-all ${props.lang === 'ar' ? '[&[data-state=open]>svg]:-rotate-90' : '[&[data-state=open]>svg]:rotate-90'}`,
         className
       )}
       {...props}
     >
+     { props.lang === 'ar' ?
+      <ChevronLeft className={cn(chevronStyle)} />:
+      <ChevronRight className={chevronStyle} />
+    }
       {children}
-      <ChevronDown className="h-4 w-4 shrink-0 text-[#537393] dark:text-gray-400 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -54,7 +60,7 @@ const AccordionContent = React.forwardRef<
   >
     <div
       className={cn(
-        "px-4 pb-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed",
+        "px-12 pb-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed",
         className
       )}
     >

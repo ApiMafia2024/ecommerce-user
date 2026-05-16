@@ -25,14 +25,14 @@ export interface SettingsByGroup {
   [group: string]: SettingsData;
 }
 
-// Common setting keys (for type safety)
+// Common setting keys (for type safety)\
 export type SettingKey = 
-  | 'site_logo'
-  | 'site_name'
+  | 'store_logo'
+  | 'store_name'
   | 'mails'
-  | 'phone'
-  | 'office_location'
-  | 'github'
+  | 'store_phone'
+  | 'store_location'
+  | 'facebook'
   | 'twitter'
   | 'linkedin'
   | 'google_play_url'

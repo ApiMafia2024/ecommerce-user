@@ -128,7 +128,7 @@ const Navbar = () => {
             >
               {locale == "ar" ? (
                 <DropdownMenuItem
-                  className="cursor-pointer rounded-lg"
+                  className="cursor-pointer rounded-lg justify-center"
                   onSelect={(e) => {
                     e.preventDefault()
                     handleChangeLocale('en')
@@ -138,7 +138,7 @@ const Navbar = () => {
                 </DropdownMenuItem>
               ) : (
                 <DropdownMenuItem
-                  className="cursor-pointer rounded-lg"
+                  className="cursor-pointer rounded-lg justify-center"
                   onSelect={(e) => {
                     e.preventDefault()
                     handleChangeLocale('ar')

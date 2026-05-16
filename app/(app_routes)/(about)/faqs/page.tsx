@@ -5,13 +5,14 @@ import Loading from "@/app/loading";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Footer from "@/components/shared/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Button } from "@/components/ui";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
 
 export default function FaqsPage() {
   const { data: faqs, isLoading, error } = useFaqs();
   const t = useTranslations("FaqsPage");
+  const locale = useLocale()
 
   if (isLoading) {
     return <Loading />;
@@ -25,15 +26,7 @@ export default function FaqsPage() {
           className="mb-8"
         />
 
-        <div className="bg-white dark:bg-[#2d3238] rounded-2xl border border-[#e8edf2] dark:border-[#3a3f45] p-6 sm:p-8">
-          <div className="flex items-center justify-between gap-4">
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#0f141a] dark:text-white">
-              {t("title")}
-            </h1>
-            <Button asChild variant="link" className="px-0 font-bold">
-              <Link href="/contact">{t("contactCta")}</Link>
-            </Button>
-          </div>
+        <div className="rounded-2xl px-6 sm:px-8">
 
           {error ? (
             <div className="mt-6 rounded-xl border border-red-200 dark:border-red-900/40 bg-red-50 dark:bg-red-900/10 p-4">
@@ -55,7 +48,7 @@ export default function FaqsPage() {
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs?.map((faq) => (
                   <AccordionItem key={faq.id} value={`faq-${faq.id}`}>
-                    <AccordionTrigger>{faq.question}</AccordionTrigger>
+                    <AccordionTrigger lang={locale}>{faq.question}</AccordionTrigger>
                     <AccordionContent>{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}

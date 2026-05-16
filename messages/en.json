@@ -612,7 +612,31 @@
       }
     },
     "trust": {
-      "title": "Trusted by Industry Leaders"
+      "title": "Our Premium Brands"
+    },
+    "newHero": {
+      "badge": "THE TECH YOU LOVE",
+      "title": "Your Daily Life, {highlight} by Tech.",
+      "highlight": "Elevated",
+      "subtitle": "APITech brings you the world's most innovative consumer electronics. From seamless smart home integration to premium personal gadgets, we deliver the future directly to your door.",
+      "browseCatalog": "Browse Catalog",
+      "todaysDeals": "Today's Deals"
+    },
+    "missionVision": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "To curate a collection of the world's most reliable and cutting-edge electronics. We believe technology should be accessible, enjoyable, and simplify your everyday life through premium quality and exceptional service."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To become the world's most trusted destination for tech enthusiasts. We envision a community where innovation meets lifestyle, ensuring that every purchase from APITech brings lasting joy and utility to our customers."
+      }
+    },
+    "statsSection": {
+      "happyShoppers": "Happy Shoppers",
+      "averageDelivery": "Average Delivery",
+      "premiumProducts": "Premium Products",
+      "positiveReviews": "Positive Reviews"
     }
   },
   "FaqsPage": {
@@ -676,7 +700,7 @@
       },
       "subject": {
         "label": "Subject",
-        "placeholder": "Select a subject",
+        "placeholder": "Tell your subject",
         "required": "Subject is required",
         "options": {
           "technicalSupport": "Technical Support",
